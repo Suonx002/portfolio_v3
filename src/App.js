@@ -6,10 +6,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import Theme from './Theme';
 
 import Navbar from './components/Navbar';
-
-const home = () => {
-  return <div>HOME PAGE</div>;
-};
+import Homepage from './components/Homepage';
 
 function App() {
   return (
@@ -17,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Switch>
-          <Route exact path='/' component={home} />
+          <Route exact path='/' component={Homepage} />
         </Switch>
       </BrowserRouter>
     </ThemeProvider>

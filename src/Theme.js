@@ -27,13 +27,15 @@ export default createMuiTheme({
       fontSize: '2.5rem',
       fontFamily: 'Roboto, sans-serif',
       fontWeight: 700,
-      color: primaryColor
+      color: secondaryColor,
+      lineHeight: 1.5
     },
     h3: {
       fontSize: '2rem',
       fontFamily: 'Roboto, sans-serif',
       fontWeight: 700,
-      color: primaryColor
+      color: secondaryColor,
+      lineHeight: 1.5
     },
     h4: {
       fontSize: '1.25rem',
@@ -58,7 +60,7 @@ export default createMuiTheme({
   overrides: {
     MuiDrawer: {
       paper: {
-        marginTop: '5.5rem'
+        marginTop: '5.7rem'
       }
     }
   }

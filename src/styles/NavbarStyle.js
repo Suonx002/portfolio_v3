@@ -1,18 +1,18 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles(theme => ({
-  toolbarMargin: {
-    ...theme.mixins.toolbar,
-    marginBottom: '1.5rem',
-    [theme.breakpoints.down('sm')]: {
-      marginBottom: '2rem'
-    },
-    [theme.breakpoints.down('xs')]: {
-      marginBottom: '2.5rem'
-    }
-  },
+  // toolbarMargin: {
+  //   ...theme.mixins.toolbar,
+  //   marginBottom: '1.4rem',
+  //   [theme.breakpoints.down('sm')]: {
+  //     marginBottom: '1.6rem'
+  //   },
+  //   [theme.breakpoints.down('xs')]: {
+  //     marginBottom: '2.1rem'
+  //   }
+  // },
   appbar: {
-    boxShadow: theme.shadows[1],
+    boxShadow: theme.shadows[0],
     padding: '0.5rem 0'
   },
   logoContainer: {

@@ -149,7 +149,7 @@ const Navbar = props => {
           <div className={classes.rightMenu}>{matchesSM ? drawer : tabs}</div>
         </Toolbar>
       </AppBar>
-      <div className={classes.toolbarMargin} />
+      {/* <div className={classes.toolbarMargin} /> */}
     </Fragment>
   );
 };
