@@ -1,23 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles(theme => ({
-  toolbarMargin: {
-    ...theme.mixins.toolbar,
-    marginBottom: '1.4rem',
-    [theme.breakpoints.down('sm')]: {
-      marginBottom: '1.6rem'
-    },
-    [theme.breakpoints.down('xs')]: {
-      marginBottom: '2.1rem'
-    }
-  },
-  mainContainer: {
-    minHeight: '100vh',
-    width: '100vw',
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.common.white,
-    overflow: 'hidden'
-  },
   gridItemMarginBottom: {
     marginBottom: '2rem'
   },
@@ -34,8 +17,8 @@ export default makeStyles(theme => ({
     margin: '2rem 0'
   },
   cardContainer: {
-    minWidth: 80,
-    height: 80,
+    minWidth: 70,
+    height: 75,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

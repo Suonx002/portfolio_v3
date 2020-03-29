@@ -52,19 +52,14 @@ const Navbar = props => {
       activeIndex: 0
     },
     {
-      name: 'About Me',
-      link: '/about',
-      activeIndex: 1
-    },
-    {
       name: 'Portfolio Work',
       link: '/portfolio',
-      activeIndex: 2
+      activeIndex: 1
     },
     {
       name: 'Contact',
       link: '/contact',
-      activeIndex: 3
+      activeIndex: 2
     }
   ];
 
