@@ -10,7 +10,11 @@ export default makeStyles(theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    overflow: 'hidden'
+    overflow: 'hidden',
+
+    [theme.breakpoints.down('xs')]: {
+      marginBottom: '3rem'
+    }
   },
   getInTouch: {
     textTransform: 'none',

@@ -1,12 +1,24 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles(theme => ({
+  gridContainerItem: {
+    margin: '0.5rem',
+    [theme.breakpoints.down('xs')]: {
+      margin: '0 0 1rem 0'
+    }
+  },
   cardContainer: {
-    maxWidth: 550,
-    color: theme.palette.primary.main
+    maxWidth: 650,
+    color: theme.palette.primary.main,
+    [theme.breakpoints.down('xs')]: {
+      width: '100%'
+    }
   },
   mediaContainer: {
-    height: 200
+    height: 250,
+    [theme.breakpoints.down('xs')]: {
+      height: 200
+    }
   },
   dialogContainer: {
     // maxWidth: 500

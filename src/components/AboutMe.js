@@ -74,8 +74,13 @@ const AboutMe = () => {
         <Grid
           container
           justify='space-between'
-          style={{ marginBottom: '10rem' }}>
-          <Grid item container md={5} direction='column'>
+          className={classes.aboutMeContainerMargin}>
+          <Grid
+            item
+            container
+            md={5}
+            direction='column'
+            className={classes.gridItemContainerMargin}>
             <Grid item className={classes.gridItemMarginBottom}>
               <Typography variant='h3'>About Me</Typography>
             </Grid>

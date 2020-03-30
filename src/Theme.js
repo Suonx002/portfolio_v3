@@ -63,10 +63,10 @@ export default createMuiTheme({
     }
   },
   overrides: {
-    // MuiDrawer: {
-    //   paper: {
-    //     marginTop: '5.7rem'
-    //   }
-    // }
+    MuiCardActions: {
+      root: {
+        justifyContent: 'flex-end'
+      }
+    }
   }
 });

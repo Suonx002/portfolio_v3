@@ -61,8 +61,11 @@ const Showcase = () => {
   const classes = useStyles();
 
   return (
-    <Grid container direction='column'>
-      <Grid item>
+    <Grid
+      container
+      direction='column'
+      className={classes.showCaseContainerMargin}>
+      <Grid item style={{ marginBottom: '2rem' }}>
         <Typography variant='h3'>Portfolio</Typography>
       </Grid>
       {/* portoflio container */}

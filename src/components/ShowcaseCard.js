@@ -46,8 +46,14 @@ const ShowcaseCard = ({ project }) => {
   const handleDialogOpen = () => setOpenDialog(true);
 
   return (
-    <Grid item container direction='column'>
-      <Grid item>
+    <Grid
+      item
+      container
+      direction='column'
+      alignItems='center'
+      justify='center'
+      md>
+      <Grid item className={classes.gridContainerItem}>
         <Card className={classes.cardContainer}>
           <CardActionArea>
             <CardMedia
@@ -64,12 +70,16 @@ const ShowcaseCard = ({ project }) => {
               </Typography>
             </CardContent>
           </CardActionArea>
+          <Divider />
           <CardActions>
-            <Button size='small' color='primary' variant='contained'>
+            <Button
+              size={matchesXS ? 'small' : undefined}
+              color='primary'
+              variant='contained'>
               Live Demo
             </Button>
             <Button
-              size='small'
+              size={matchesXS ? 'small' : undefined}
               color='primary'
               variant='outlined'
               onClick={handleDialogOpen}>
