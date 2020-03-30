@@ -88,7 +88,7 @@ const AboutMe = () => {
               item
               className={classes.aboutMeInfo}
               style={{ marginBottom: '2rem' }}>
-              <Typography variant='h6' className={classes.infoText}>
+              <Typography variant='body1' className={classes.infoText}>
                 Full stack software developer with a background in information
                 technology infrastructure. Self-driven, adaptable learner, and
                 constantly striving to learn and understand various programming

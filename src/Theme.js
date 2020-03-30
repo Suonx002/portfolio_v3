@@ -50,6 +50,12 @@ export default createMuiTheme({
       color: secondaryColor
     },
     h6: {
+      fontSize: '1.25rem',
+      fontFamily: 'Roboto, sans-serif',
+      fontWeight: 500,
+      color: primaryColor
+    },
+    body1: {
       fontSize: '1rem',
       fontFamily: 'Roboto, sans-serif',
       fontWeight: 400

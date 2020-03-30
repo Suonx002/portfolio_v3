@@ -62,10 +62,10 @@ const ShowcaseCard = ({ project }) => {
               title={title}
             />
             <CardContent>
-              <Typography gutterBottom variant='h4'>
+              <Typography gutterBottom variant='h6'>
                 {title}
               </Typography>
-              <Typography variant='h6' color='textSecondary' component='p'>
+              <Typography variant='body1' color='textSecondary' component='p'>
                 {description}
               </Typography>
             </CardContent>
@@ -113,7 +113,9 @@ const ShowcaseCard = ({ project }) => {
               {project.description}
             </DialogContentText>
             <div className={classes.stack}>
-              <Typography variant='h6'>Tech Stacks</Typography>
+              <Typography className={classes.stackTitle}>
+                Tech Stacks
+              </Typography>
               <ul className={classes.techList}>
                 {techStacks.map(tech => (
                   <li className={classes.techItem} key={uuidv4()}>

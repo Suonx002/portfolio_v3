@@ -34,6 +34,10 @@ export default makeStyles(theme => ({
   stack: {
     padding: 0
   },
+  stackTitle: {
+    ...theme.typography.h6,
+    fontSize: '1.1rem'
+  },
   techList: {
     display: 'flex',
     paddingLeft: '1rem',
