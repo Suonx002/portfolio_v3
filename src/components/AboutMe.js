@@ -71,7 +71,10 @@ const AboutMe = () => {
         unmountOnExit
         timeout={{ enter: matchesSM ? 0 : 1000, exit: matchesSM ? 0 : 1000 }}>
         {/* about me info */}
-        <Grid container justify='space-between'>
+        <Grid
+          container
+          justify='space-between'
+          style={{ marginBottom: '10rem' }}>
           <Grid item container md={5} direction='column'>
             <Grid item className={classes.gridItemMarginBottom}>
               <Typography variant='h3'>About Me</Typography>

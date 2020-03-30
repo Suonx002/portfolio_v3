@@ -45,7 +45,7 @@ const Navbar = props => {
     },
     {
       name: 'Portfolio',
-      link: '#portfolio',
+      link: '#footer',
       activeIndex: 2
     },
     {
@@ -62,7 +62,7 @@ const Navbar = props => {
           key={`${route}-${index}`}
           className={classes.tab}
           label={route.name}
-          component='button'
+          component={'a'}
           href={route.link}
           disableRipple
         />
@@ -101,7 +101,7 @@ const Navbar = props => {
               button
               selected={value === route.activeIndex}
               classes={{ selected: classes.drawerItemSelected }}
-              // component='button'
+              component={'a'}
               href={route.link}
               onClick={() => {
                 setOpenDrawer(false);

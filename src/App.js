@@ -8,6 +8,7 @@ import Container from '@material-ui/core/Container';
 import Navbar from './components/Navbar';
 import Homepage from './components/Homepage';
 import AboutMe from './components/AboutMe';
+import Showcase from './components/Showcase';
 import Footer from './components/Footer';
 
 const useStyles = makeStyles(theme => ({
@@ -26,6 +27,7 @@ function App() {
         <Container maxWidth='xl'>
           <Homepage />
           <AboutMe />
+          <Showcase />
         </Container>
         <Footer />
       </div>
