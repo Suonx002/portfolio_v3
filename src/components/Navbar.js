@@ -7,15 +7,15 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import CloseIcon from '@material-ui/icons/Close';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import useStyles from '../styles/NavbarStyle';
-import logoAnimation from '../assets/img/logoAnimation.mp4';
 import logo from '../assets/img/logo_white.png';
 
 const Navbar = props => {
@@ -84,6 +84,16 @@ const Navbar = props => {
         onClose={() => setOpenDrawer(false)}
         onOpen={() => setOpenDrawer(true)}>
         <List className={classes.drawerContainer} disablePadding>
+          <ListItem divider>
+            <IconButton
+              onClick={() => setOpenDrawer(false)}
+              className={classes.closeContainer}
+              edge='end'
+              aria-label='close'>
+              <CloseIcon className={classes.closeIcon} />
+            </IconButton>
+          </ListItem>
+
           {routes.map((route, index) => (
             <ListItem
               disableRipple

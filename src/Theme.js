@@ -58,10 +58,10 @@ export default createMuiTheme({
     }
   },
   overrides: {
-    MuiDrawer: {
-      paper: {
-        marginTop: '5.7rem'
-      }
-    }
+    // MuiDrawer: {
+    //   paper: {
+    //     marginTop: '5.7rem'
+    //   }
+    // }
   }
 });

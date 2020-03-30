@@ -22,7 +22,7 @@ function App() {
   return (
     <div className={classes.bodyContainer}>
       <Navbar />
-      <Container>
+      <Container maxWidth='xl'>
         <Homepage />
         <AboutMe />
       </Container>

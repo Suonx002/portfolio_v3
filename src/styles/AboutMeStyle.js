@@ -8,6 +8,7 @@ export default makeStyles(theme => ({
     marginBottom: '2rem'
   },
   cardContainer: {
+    overflow: 'hidden',
     margin: '0.5rem',
     minWidth: 70,
     height: 80,

@@ -13,6 +13,7 @@ export default makeStyles(theme => ({
   },
   appbar: {
     boxShadow: theme.shadows[0]
+    // zIndex: theme.zIndex.drawer + 1
   },
   logoContainer: {
     height: 70,
@@ -50,6 +51,13 @@ export default makeStyles(theme => ({
     '& .MuiListItemText-root': {
       opacity: 1
     }
+  },
+  closeContainer: {
+    marginLeft: 'auto'
+  },
+  closeIcon: {
+    color: theme.palette.primary.main,
+    fontSize: 35
   },
   listItem: {
     textAlign: 'center',
