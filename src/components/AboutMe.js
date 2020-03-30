@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 import Slide from '@material-ui/core/Slide';
 import Paper from '@material-ui/core/Paper';
@@ -62,50 +63,52 @@ const AboutMe = () => {
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <Slide
-      direction='left'
-      in
-      mountOnEnter
-      unmountOnExit
-      timeout={{ enter: matchesSM ? 0 : 1000, exit: matchesSM ? 0 : 1000 }}>
-      {/* about me info */}
-      <Grid container id='#aboutme' justify='space-between'>
-        <Grid item container md={5} direction='column'>
-          <Grid item className={classes.gridItemMarginBottom}>
-            <Typography variant='h3'>About Me</Typography>
+    <ScrollableAnchor id='aboutme'>
+      <Slide
+        direction='left'
+        in
+        mountOnEnter
+        unmountOnExit
+        timeout={{ enter: matchesSM ? 0 : 1000, exit: matchesSM ? 0 : 1000 }}>
+        {/* about me info */}
+        <Grid container justify='space-between'>
+          <Grid item container md={5} direction='column'>
+            <Grid item className={classes.gridItemMarginBottom}>
+              <Typography variant='h3'>About Me</Typography>
+            </Grid>
+            <Grid
+              item
+              className={classes.aboutMeInfo}
+              style={{ marginBottom: '2rem' }}>
+              <Typography variant='h6' className={classes.infoText}>
+                Full stack software developer with a background in information
+                technology infrastructure. Self-driven, adaptable learner, and
+                constantly striving to learn and understand various programming
+                technologies to build modern websites.
+              </Typography>
+            </Grid>
           </Grid>
-          <Grid
-            item
-            className={classes.aboutMeInfo}
-            style={{ marginBottom: '2rem' }}>
-            <Typography variant='h6' className={classes.infoText}>
-              Full stack software developer with a background in information
-              technology infrastructure. Self-driven, adaptable learner, and
-              constantly striving to learn and understand various programming
-              technologies to build modern websites.
-            </Typography>
+          <Grid item container md={6} direction='column'>
+            <Grid item className={classes.gridItemMarginBottom}>
+              <Typography variant='h3'>Experience With</Typography>
+            </Grid>
+            <Grid item container>
+              {icons.map((icon, index) => (
+                <Grid item key={`${icon}-${index}`} xs={6} sm={3}>
+                  <Paper className={classes.cardContainer} elevation={2}>
+                    <LightTooltip title={icon.name}>
+                      <svg className={classes.svgIcon}>
+                        <use href={`${sprite}#icon-${icon.link}`} />
+                      </svg>
+                    </LightTooltip>
+                  </Paper>
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
-        <Grid item container md={6} direction='column'>
-          <Grid item className={classes.gridItemMarginBottom}>
-            <Typography variant='h3'>Experience With</Typography>
-          </Grid>
-          <Grid item container>
-            {icons.map((icon, index) => (
-              <Grid item key={`${icon}-${index}`} xs={6} sm={3}>
-                <Paper className={classes.cardContainer} elevation={2}>
-                  <LightTooltip title={icon.name}>
-                    <svg className={classes.svgIcon}>
-                      <use href={`${sprite}#icon-${icon.link}`} />
-                    </svg>
-                  </LightTooltip>
-                </Paper>
-              </Grid>
-            ))}
-          </Grid>
-        </Grid>
-      </Grid>
-    </Slide>
+      </Slide>
+    </ScrollableAnchor>
   );
 };
 
