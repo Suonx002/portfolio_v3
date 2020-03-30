@@ -69,8 +69,8 @@ const AboutMe = () => {
       unmountOnExit
       timeout={{ enter: matchesSM ? 0 : 1000, exit: matchesSM ? 0 : 1000 }}>
       {/* about me info */}
-      <Grid container direction='column' alignItems='center'>
-        <Grid item container md={10}>
+      <Grid container id='#aboutme' justify='space-between'>
+        <Grid item container md={5} direction='column'>
           <Grid item className={classes.gridItemMarginBottom}>
             <Typography variant='h3'>About Me</Typography>
           </Grid>
@@ -85,15 +85,12 @@ const AboutMe = () => {
               technologies to build modern websites.
             </Typography>
           </Grid>
+        </Grid>
+        <Grid item container md={6} direction='column'>
           <Grid item className={classes.gridItemMarginBottom}>
             <Typography variant='h3'>Experience With</Typography>
           </Grid>
-          <Grid
-            item
-            container
-            spacing={3}
-            // justify={'space-between'}
-          >
+          <Grid item container>
             {icons.map((icon, index) => (
               <Grid item key={`${icon}-${index}`} xs={6} sm={3}>
                 <Paper className={classes.cardContainer} elevation={3}>

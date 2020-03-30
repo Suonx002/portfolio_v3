@@ -12,11 +12,8 @@ import AboutMe from './components/AboutMe';
 
 const useStyles = makeStyles(theme => ({
   bodyContainer: {
-    minHeight: '100vh',
-    minWidth: '100vw',
     backgroundColor: theme.palette.primary.main,
-    color: theme.palette.common.white,
-    overflow: 'hidden'
+    color: theme.palette.common.white
   }
 }));
 
@@ -25,10 +22,7 @@ function App() {
   return (
     <div className={classes.bodyContainer}>
       <Navbar />
-      <Container
-
-      // style={{ marginTop: '5rem' }}
-      >
+      <Container>
         <Homepage />
         <AboutMe />
       </Container>

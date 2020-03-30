@@ -39,14 +39,19 @@ const Navbar = props => {
       activeIndex: 0
     },
     {
+      name: 'About Me',
+      link: '#aboutme',
+      activeIndex: 1
+    },
+    {
       name: 'Portfolio',
       link: '#portfolio',
-      activeIndex: 1
+      activeIndex: 2
     },
     {
       name: 'Contact',
       link: '#contact',
-      activeIndex: 2
+      activeIndex: 3
     }
   ];
 

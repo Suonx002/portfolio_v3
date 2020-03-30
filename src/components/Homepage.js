@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Grow from '@material-ui/core/Grow';
-import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 
 import useStyles from '../styles/HomepageStyle';
@@ -33,7 +32,7 @@ const Homepage = () => {
           // alignItems='center'
         >
           <Grid item container md={5} direction='column'>
-            <Grid item>
+            <Grid item style={{ maxWidth: '100%' }}>
               <Typography variant='h2'>I'm Vuthy Suon,</Typography>
             </Grid>
             <Grid item className={classes.gridItemMarginBottom}>

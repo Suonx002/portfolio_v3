@@ -8,6 +8,7 @@ export default makeStyles(theme => ({
     marginBottom: '2rem'
   },
   cardContainer: {
+    margin: '0.5rem',
     minWidth: 70,
     height: 80,
     display: 'flex',
@@ -23,7 +24,10 @@ export default makeStyles(theme => ({
     }
   },
   infoText: {
-    color: theme.palette.secondary.dark
+    color: theme.palette.secondary.dark,
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.1rem'
+    }
   },
   svgIcon: {
     width: '100%',
