@@ -15,9 +15,12 @@ export default makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+
+    backgroundColor: theme.palette.primary.main,
     transition: 'all 0.2s',
+
     '&:hover': {
-      backgroundColor: 'rgba(255, 255, 255, 0.9)',
+      backgroundColor: theme.palette.primary.light,
       transform: 'scale(1.05)'
     },
     [theme.breakpoints.down('xs')]: {

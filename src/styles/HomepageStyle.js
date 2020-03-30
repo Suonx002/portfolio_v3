@@ -1,16 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles(theme => ({
-  // toolbarMargin: {
-  //   ...theme.mixins.toolbar
-  //   // marginBottom: '1.4rem',
-  //   // [theme.breakpoints.down('sm')]: {
-  //   //   marginBottom: '1.6rem'
-  //   // },
-  //   // [theme.breakpoints.down('xs')]: {
-  //   //   marginBottom: '2.1rem'
-  //   // }
-  // },
   gridItemMarginBottom: {
     marginBottom: '2rem'
   },
@@ -23,7 +13,8 @@ export default makeStyles(theme => ({
     overflow: 'hidden'
   },
   getInTouch: {
-    textTransform: 'none'
+    textTransform: 'none',
+    fontSize: 25
   },
   infoText: {
     color: theme.palette.secondary.dark

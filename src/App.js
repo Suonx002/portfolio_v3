@@ -3,12 +3,11 @@ import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
 
 import Navbar from './components/Navbar';
 import Homepage from './components/Homepage';
-
 import AboutMe from './components/AboutMe';
+import Footer from './components/Footer';
 
 const useStyles = makeStyles(theme => ({
   bodyContainer: {
@@ -26,6 +25,7 @@ function App() {
         <Homepage />
         <AboutMe />
       </Container>
+      <Footer />
     </div>
   );
 }

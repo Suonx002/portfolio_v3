@@ -49,6 +49,11 @@ export default createMuiTheme({
       fontWeight: 500,
       color: secondaryColor
     },
+    h6: {
+      fontSize: '1rem',
+      fontFamily: 'Roboto, sans-serif',
+      fontWeight: 400
+    },
     tab: {
       fontSize: '1rem',
       fontFamily: 'Roboto, sans-serif',
