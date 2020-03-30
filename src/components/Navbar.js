@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -33,32 +32,20 @@ const Navbar = props => {
     setValue(newValue);
   };
 
-  //   const toggleDrawer = open => event => {
-  //     if (
-  //       event &&
-  //       event.type === 'keydown' &&
-  //       (event.key === 'Tab' || event.key === 'Shift')
-  //     ) {
-  //       return;
-  //     }
-
-  //     setOpenDrawer(true);
-  //   };
-
   const routes = [
     {
       name: 'Home',
-      link: '/',
+      link: '#home',
       activeIndex: 0
     },
     {
-      name: 'Portfolio Work',
-      link: '/portfolio',
+      name: 'Portfolio',
+      link: '#portfolio',
       activeIndex: 1
     },
     {
       name: 'Contact',
-      link: '/contact',
+      link: '#contact',
       activeIndex: 2
     }
   ];
@@ -70,8 +57,8 @@ const Navbar = props => {
           key={`${route}-${index}`}
           className={classes.tab}
           label={route.name}
-          component={Link}
-          to={route.link}
+          component='button'
+          href={route.link}
           disableRipple
         />
       ))}
@@ -99,8 +86,8 @@ const Navbar = props => {
               button
               selected={value === route.activeIndex}
               classes={{ selected: classes.drawerItemSelected }}
-              component={Link}
-              to={route.link}
+              // component='button'
+              href={route.link}
               onClick={() => {
                 setOpenDrawer(false);
                 setValue(route.activeIndex);
@@ -144,7 +131,7 @@ const Navbar = props => {
           <div className={classes.rightMenu}>{matchesSM ? drawer : tabs}</div>
         </Toolbar>
       </AppBar>
-      {/* <div className={classes.toolbarMargin} /> */}
+      <div className={classes.toolbarMargin} />
     </Fragment>
   );
 };

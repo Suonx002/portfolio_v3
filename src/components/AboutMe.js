@@ -1,0 +1,115 @@
+import React from 'react';
+
+import Slide from '@material-ui/core/Slide';
+import Paper from '@material-ui/core/Paper';
+import { withStyles, useTheme } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import Tooltip from '@material-ui/core/Tooltip';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import sprite from '../assets/img/sprite.svg';
+
+import useStyles from '../styles/AboutMeStyle';
+
+const LightTooltip = withStyles(theme => ({
+  tooltip: {
+    color: theme.palette.primary.main,
+    backgroundColor: theme.palette.common.white,
+    boxShadow: theme.shadows[1],
+    fontSize: 13
+  }
+}))(Tooltip);
+
+const icons = [
+  {
+    name: 'HTML5',
+    link: 'html-5'
+  },
+  {
+    name: 'CSS3',
+    link: 'css3'
+  },
+  {
+    name: 'Sass',
+    link: 'sass'
+  },
+  {
+    name: 'Material UI',
+    link: 'material-ui'
+  },
+  {
+    name: 'Javascript',
+    link: 'javascript'
+  },
+  {
+    name: 'React',
+    link: 'react-native'
+  },
+  {
+    name: 'Node',
+    link: 'nodejs'
+  },
+  {
+    name: 'MongoDB',
+    link: 'mongodb'
+  }
+];
+
+const AboutMe = () => {
+  const classes = useStyles();
+  const theme = useTheme();
+
+  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
+
+  return (
+    <Slide
+      direction='left'
+      in
+      mountOnEnter
+      unmountOnExit
+      timeout={{ enter: matchesSM ? 0 : 1000, exit: matchesSM ? 0 : 1000 }}>
+      {/* about me info */}
+      <Grid container direction='column' alignItems='center'>
+        <Grid item container md={7}>
+          <Grid item className={classes.gridItemMarginBottom}>
+            <Typography variant='h3'>About Me</Typography>
+          </Grid>
+          <Grid
+            item
+            className={classes.aboutMeInfo}
+            style={{ marginBottom: '2rem' }}>
+            <Typography variant='h6' className={classes.infoText}>
+              Full stack software developer with a background in information
+              technology infrastructure. Self-driven, adaptable learner, and
+              constantly striving to learn and understand various programming
+              technologies to build modern websites.
+            </Typography>
+          </Grid>
+          <Grid item className={classes.gridItemMarginBottom}>
+            <Typography variant='h3'>Experience With</Typography>
+          </Grid>
+          <Grid
+            item
+            container
+            spacing={3}
+            // justify={'space-between'}
+          >
+            {icons.map((icon, index) => (
+              <Grid item key={`${icon}-${index}`} xs={6} sm={3}>
+                <Paper className={classes.cardContainer} elevation={3}>
+                  <LightTooltip title={icon.name}>
+                    <svg className={classes.svgIcon}>
+                      <use href={`${sprite}#icon-${icon.link}`} />
+                    </svg>
+                  </LightTooltip>
+                </Paper>
+              </Grid>
+            ))}
+          </Grid>
+        </Grid>
+      </Grid>
+    </Slide>
+  );
+};
+
+export default AboutMe;
