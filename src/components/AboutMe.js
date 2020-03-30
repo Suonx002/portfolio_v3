@@ -70,7 +70,7 @@ const AboutMe = () => {
       timeout={{ enter: matchesSM ? 0 : 1000, exit: matchesSM ? 0 : 1000 }}>
       {/* about me info */}
       <Grid container direction='column' alignItems='center'>
-        <Grid item container md={7}>
+        <Grid item container md={10}>
           <Grid item className={classes.gridItemMarginBottom}>
             <Typography variant='h3'>About Me</Typography>
           </Grid>

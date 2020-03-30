@@ -13,7 +13,9 @@ export default makeStyles(theme => ({
   },
   appbar: {
     boxShadow: theme.shadows[0],
-    padding: '0.5rem 0'
+    padding: '0.5rem 0',
+    minHeight: '6vh',
+    maxHeight: '6vh'
   },
   logoContainer: {
     height: 70,

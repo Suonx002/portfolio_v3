@@ -11,16 +11,25 @@ export default makeStyles(theme => ({
       marginBottom: '2.1rem'
     }
   },
-  mainContainer: {
-    minHeight: '100vh',
-    width: '100%',
-    overflow: 'hidden'
+  gridItemMarginBottom: {
+    marginBottom: '2rem'
+  },
+  homepageContainer: {
+    minHeight: 'calc(94vh - 2.5rem)',
+    maxHeight: 'calc(94vh - 2.5rem)',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   getInTouch: {
-    margin: '2rem 0'
+    textTransform: 'none'
   },
   infoText: {
     color: theme.palette.secondary.dark
+  },
+  webDeveloperContainer: {
+    height: '100%'
   },
   webDeveloperIcon: {
     width: '100%'
