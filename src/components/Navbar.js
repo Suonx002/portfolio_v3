@@ -23,9 +23,10 @@ const Navbar = props => {
   const theme = useTheme();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
+  const { value, setValue } = props;
+
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const [value, setValue] = useState(0);
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const handleTabsChange = (e, newValue) => {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -20,14 +20,17 @@ const useStyles = makeStyles(theme => ({
 
 function App() {
   const classes = useStyles();
+
+  const [value, setValue] = useState(0);
+
   return (
-    <div className={classes.bodyContainer} id='home'>
-      <Navbar />
+    <div className={classes.bodyContainer} id='home' name='home'>
+      <Navbar value={value} setValue={setValue} />
       <Container maxWidth='xl'>
         <Homepage />
         <AboutMe />
         <Showcase />
-        <Contact />
+        <Contact setValue={setValue} />
       </Container>
       <Footer />
     </div>

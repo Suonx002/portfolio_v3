@@ -10,8 +10,10 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 import useStyles from '../styles/ContactStyle';
 
-const Contact = () => {
+const Contact = props => {
   const classes = useStyles();
+  const { setValue } = props;
+
   return (
     <div id='contact'>
       <Grid
@@ -44,7 +46,10 @@ const Contact = () => {
           size='medium'
           className={classes.iconContainer}
           color='secondary'
-          onClick={() => scroll.scrollToTop()}>
+          onClick={() => {
+            scroll.scrollToTop();
+            setValue(0);
+          }}>
           <ExpandLessIcon className={classes.icon} />
         </IconButton>
       </div>
