@@ -1,5 +1,4 @@
 import React from 'react';
-import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 
 import Slide from '@material-ui/core/Slide';
 import Paper from '@material-ui/core/Paper';
@@ -11,8 +10,6 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import sprite from '../assets/img/sprite.svg';
 
 import useStyles from '../styles/AboutMeStyle';
-
-configureAnchors({ offset: -200, scrollDuration: 600 });
 
 const LightTooltip = withStyles(theme => ({
   tooltip: {
@@ -65,60 +62,59 @@ const AboutMe = () => {
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <ScrollableAnchor id='aboutme'>
-      <Slide
-        direction='left'
-        in
-        mountOnEnter
-        unmountOnExit
-        timeout={{ enter: matchesSM ? 0 : 1000, exit: matchesSM ? 0 : 1000 }}>
-        {/* about me info */}
+    <Slide
+      direction='left'
+      in
+      mountOnEnter
+      unmountOnExit
+      timeout={{ enter: matchesSM ? 0 : 1000, exit: matchesSM ? 0 : 1000 }}>
+      {/* about me info */}
+      <Grid
+        id='aboutme'
+        container
+        justify='space-between'
+        className={classes.aboutMeContainerMargin}>
         <Grid
+          item
           container
-          justify='space-between'
-          className={classes.aboutMeContainerMargin}>
+          md={5}
+          direction='column'
+          className={classes.gridItemContainerMargin}>
+          <Grid item className={classes.gridItemMarginBottom}>
+            <Typography variant='h3'>About Me</Typography>
+          </Grid>
           <Grid
             item
-            container
-            md={5}
-            direction='column'
-            className={classes.gridItemContainerMargin}>
-            <Grid item className={classes.gridItemMarginBottom}>
-              <Typography variant='h3'>About Me</Typography>
-            </Grid>
-            <Grid
-              item
-              className={classes.aboutMeInfo}
-              style={{ marginBottom: '2rem' }}>
-              <Typography variant='body1' className={classes.infoText}>
-                Hello! I'm a software developer with a background in information
-                technology infrastructure. Self-driven, adaptable learner, and
-                constantly striving to learn and understand various programming
-                technologies to build modern websites.
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item container md={6} direction='column'>
-            <Grid item className={classes.gridItemMarginBottom}>
-              <Typography variant='h3'>Experience With</Typography>
-            </Grid>
-            <Grid item container>
-              {icons.map((icon, index) => (
-                <Grid item key={`${icon}-${index}`} xs={6} sm={3}>
-                  <Paper className={classes.cardContainer} elevation={2}>
-                    <LightTooltip title={icon.name}>
-                      <svg className={classes.svgIcon}>
-                        <use href={`${sprite}#icon-${icon.link}`} />
-                      </svg>
-                    </LightTooltip>
-                  </Paper>
-                </Grid>
-              ))}
-            </Grid>
+            className={classes.aboutMeInfo}
+            style={{ marginBottom: '2rem' }}>
+            <Typography variant='body1' className={classes.infoText}>
+              Hello! I'm a software developer with a background in information
+              technology infrastructure. Self-driven, adaptable learner, and
+              constantly striving to learn and understand various programming
+              technologies to build modern websites.
+            </Typography>
           </Grid>
         </Grid>
-      </Slide>
-    </ScrollableAnchor>
+        <Grid item container md={6} direction='column'>
+          <Grid item className={classes.gridItemMarginBottom}>
+            <Typography variant='h3'>Experience With</Typography>
+          </Grid>
+          <Grid item container>
+            {icons.map((icon, index) => (
+              <Grid item key={`${icon}-${index}`} xs={6} sm={3}>
+                <Paper className={classes.cardContainer} elevation={2}>
+                  <LightTooltip title={icon.name}>
+                    <svg className={classes.svgIcon}>
+                      <use href={`${sprite}#icon-${icon.link}`} />
+                    </svg>
+                  </LightTooltip>
+                </Paper>
+              </Grid>
+            ))}
+          </Grid>
+        </Grid>
+      </Grid>
+    </Slide>
   );
 };
 

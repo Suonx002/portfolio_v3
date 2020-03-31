@@ -1,5 +1,5 @@
 import React from 'react';
-import ScrollableAnchor, { goToAnchor } from 'react-scrollable-anchor';
+import { animateScroll as scroll } from 'react-scroll';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -13,44 +13,42 @@ import useStyles from '../styles/ContactStyle';
 const Contact = () => {
   const classes = useStyles();
   return (
-    <ScrollableAnchor id='contact'>
-      <div>
-        <Grid
-          container
-          direction='column'
-          justify='center'
-          alignItems='center'
-          className={classes.contactContainer}>
-          <Grid item className={classes.contactItem}>
-            <Typography variant='h2'>Get In Touch</Typography>
-          </Grid>
-          <Grid item className={classes.contactItem} style={{ maxWidth: 450 }}>
-            <Typography variant='body1' className={classes.contactInfo}>
-              I am currently looking for work opportuniies. You can reach me
-              through my email or social links!
-            </Typography>
-          </Grid>
-          <Grid item className={classes.contactItem}>
-            <Button
-              variant='outlined'
-              color='secondary'
-              size='large'
-              className={classes.contactBtn}>
-              Say Hello!
-            </Button>
-          </Grid>
+    <div id='contact'>
+      <Grid
+        container
+        direction='column'
+        justify='center'
+        alignItems='center'
+        className={classes.contactContainer}>
+        <Grid item className={classes.contactItem}>
+          <Typography variant='h2'>Get In Touch</Typography>
         </Grid>
-        <div className={classes.goBackHomeContainer}>
-          <IconButton
-            size='medium'
-            className={classes.iconContainer}
+        <Grid item className={classes.contactItem} style={{ maxWidth: 450 }}>
+          <Typography variant='body1' className={classes.contactInfo}>
+            I am currently looking for work opportuniies. You can reach me
+            through my email or social links!
+          </Typography>
+        </Grid>
+        <Grid item className={classes.contactItem}>
+          <Button
+            variant='outlined'
             color='secondary'
-            onClick={() => goToAnchor('navbar')}>
-            <ExpandLessIcon className={classes.icon} />
-          </IconButton>
-        </div>
+            size='large'
+            className={classes.contactBtn}>
+            Say Hello!
+          </Button>
+        </Grid>
+      </Grid>
+      <div className={classes.goBackHomeContainer}>
+        <IconButton
+          size='medium'
+          className={classes.iconContainer}
+          color='secondary'
+          onClick={() => scroll.scrollToTop()}>
+          <ExpandLessIcon className={classes.icon} />
+        </IconButton>
       </div>
-    </ScrollableAnchor>
+    </div>
   );
 };
 

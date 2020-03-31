@@ -1,6 +1,5 @@
 import React from 'react';
 // import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import ScrollableAnchor from 'react-scrollable-anchor';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -22,18 +21,16 @@ const useStyles = makeStyles(theme => ({
 function App() {
   const classes = useStyles();
   return (
-    <ScrollableAnchor id='home'>
-      <div className={classes.bodyContainer}>
-        <Navbar />
-        <Container maxWidth='xl'>
-          <Homepage />
-          <AboutMe />
-          <Showcase />
-          <Contact />
-        </Container>
-        <Footer />
-      </div>
-    </ScrollableAnchor>
+    <div className={classes.bodyContainer} id='home'>
+      <Navbar />
+      <Container maxWidth='xl'>
+        <Homepage />
+        <AboutMe />
+        <Showcase />
+        <Contact />
+      </Container>
+      <Footer />
+    </div>
   );
 }
 

@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -34,22 +35,22 @@ const Navbar = props => {
   const routes = [
     {
       name: 'Home',
-      link: '#home',
+      link: 'home',
       activeIndex: 0
     },
     {
       name: 'About Me',
-      link: '#aboutme',
+      link: 'aboutme',
       activeIndex: 1
     },
     {
       name: 'Portfolio',
-      link: '#portfolio',
+      link: 'portfolio',
       activeIndex: 2
     },
     {
       name: 'Contact',
-      link: '#contact',
+      link: 'contact',
       activeIndex: 3
     }
   ];
@@ -61,8 +62,13 @@ const Navbar = props => {
           key={`${route}-${index}`}
           className={classes.tab}
           label={route.name}
-          component={'a'}
-          href={route.link}
+          component={Link}
+          // href={route.link}
+          to={route.link}
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={600}
           disableRipple
         />
       ))}
@@ -100,8 +106,14 @@ const Navbar = props => {
               button
               selected={value === route.activeIndex}
               classes={{ selected: classes.drawerItemSelected }}
-              component={'a'}
-              href={route.link}
+              // component={'a'}
+              // href={route.link}
+              component={Link}
+              to={route.link}
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={600}
               onClick={() => {
                 setOpenDrawer(false);
                 setValue(route.activeIndex);

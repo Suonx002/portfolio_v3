@@ -1,5 +1,4 @@
 import React from 'react';
-import ScrollableAnchor from 'react-scrollable-anchor';
 
 import Grid from '@material-ui/core/Grid';
 import Tooltip from '@material-ui/core/Tooltip';
@@ -37,37 +36,32 @@ const LightTooltip = withStyles(theme => ({
 const Footer = () => {
   const classes = useStyles();
   return (
-    <ScrollableAnchor id='footer'>
-      <Grid
-        container
-        className={classes.mainContainer}
-        justify='center'
-        alignItems='center'>
-        <Grid item container justify='center' alignItems='center'>
-          {icons.map((item, index) => (
-            <Grid
-              item
-              key={`${item}-${index}`}
-              className={classes.itemContainer}>
-              <LightTooltip title={item.name}>
-                <IconButton
-                  className={classes.buttonContainer}
-                  href={item.link}
-                  target='_blank'>
-                  <item.icon className={classes.icon} />
-                </IconButton>
-              </LightTooltip>
-            </Grid>
-          ))}
-        </Grid>
-
-        <Grid item>
-          <Typography variant='h6' className={classes.builtBy}>
-            Designed and built by Vuthy Suon
-          </Typography>
-        </Grid>
+    <Grid
+      container
+      className={classes.mainContainer}
+      justify='center'
+      alignItems='center'>
+      <Grid item container justify='center' alignItems='center'>
+        {icons.map((item, index) => (
+          <Grid item key={`${item}-${index}`} className={classes.itemContainer}>
+            <LightTooltip title={item.name}>
+              <IconButton
+                className={classes.buttonContainer}
+                href={item.link}
+                target='_blank'>
+                <item.icon className={classes.icon} />
+              </IconButton>
+            </LightTooltip>
+          </Grid>
+        ))}
       </Grid>
-    </ScrollableAnchor>
+
+      <Grid item>
+        <Typography variant='h6' className={classes.builtBy}>
+          Designed and built by Vuthy Suon
+        </Typography>
+      </Grid>
+    </Grid>
   );
 };
 
