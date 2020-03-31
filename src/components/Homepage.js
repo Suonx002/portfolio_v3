@@ -26,19 +26,17 @@ const Homepage = () => {
           enter: matchesSM ? 0 : 1000,
           exit: matchesSM ? 0 : 1000
         }}>
-        <Grid
-          container
-          justify='center'
-
-          // alignItems='center'
-        >
+        <Grid container justify='center'>
           <Grid item container md={5} direction='column'>
-            <Grid item style={{ maxWidth: '100%' }}>
+            <Grid
+              item
+              // style={{ maxWidth: '100%' }}
+            >
               <Typography variant='h2'>I'm Vuthy Suon,</Typography>
             </Grid>
             <Grid item className={classes.gridItemMarginBottom}>
               <Typography variant='h3' className={classes.infoText}>
-                a full stack software developer based in Minneapolis, MN.
+                a software engineer based in Minneapolis, MN.
               </Typography>
             </Grid>
             <Grid item className={classes.gridItemMarginBottom}>

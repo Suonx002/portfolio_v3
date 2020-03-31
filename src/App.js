@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import Homepage from './components/Homepage';
 import AboutMe from './components/AboutMe';
 import Showcase from './components/Showcase';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 const useStyles = makeStyles(theme => ({
@@ -28,6 +29,7 @@ function App() {
           <Homepage />
           <AboutMe />
           <Showcase />
+          <Contact />
         </Container>
         <Footer />
       </div>
