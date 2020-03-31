@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles(theme => ({
   mainContainer: {
     backgroundColor: theme.palette.primary.dark,
-    padding: '1rem 0.5'
+    padding: '0.5rem'
   },
   buttonContainer: {
     color: theme.palette.secondary.dark,
