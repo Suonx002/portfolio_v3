@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
 
 import Grid from '@material-ui/core/Grid';

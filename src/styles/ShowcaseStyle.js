@@ -8,9 +8,9 @@ export default makeStyles(theme => ({
     },
     [theme.breakpoints.down('sm')]: {
       marginBottom: '10rem'
-    },
-    [theme.breakpoints.down('xs')]: {
-      marginBottom: '5rem'
     }
+    // [theme.breakpoints.down('xs')]: {
+    //   marginBottom: '5rem'
+    // }
   }
 }));
