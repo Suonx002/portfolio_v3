@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-// import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -22,6 +21,10 @@ function App() {
   const classes = useStyles();
 
   const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    // window.location.reload();
+  }, []);
 
   return (
     <div className={classes.bodyContainer} id='home' name='home'>

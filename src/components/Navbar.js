@@ -14,6 +14,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
+import Button from '@material-ui/core/Button';
 
 import useStyles from '../styles/NavbarStyle';
 import logo from '../assets/img/logo_white.png';
@@ -73,6 +74,14 @@ const Navbar = props => {
           disableRipple
         />
       ))}
+      {/* <Tab label='Resume' component='button' className={classes.resumeButton} /> */}
+      <Button
+        variant='outlined'
+        color='secondary'
+        className={classes.resumeButton}>
+        Resume
+      </Button>
+      >
     </Tabs>
   );
 
@@ -128,6 +137,10 @@ const Navbar = props => {
               />
             </ListItem>
           ))}
+
+          <ListItem button divider className={classes.listItem}>
+            Resume
+          </ListItem>
         </List>
       </SwipeableDrawer>
     </Fragment>

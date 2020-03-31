@@ -73,6 +73,11 @@ export default createMuiTheme({
       root: {
         justifyContent: 'flex-end'
       }
+    },
+    MuiCardMedia: {
+      root: {
+        backgroundPosition: 'top'
+      }
     }
   }
 });

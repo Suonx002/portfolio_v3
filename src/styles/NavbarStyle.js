@@ -11,6 +11,16 @@ export default makeStyles(theme => ({
     //   marginBottom: '2.1rem'
     // }
   },
+  resumeButton: {
+    color: theme.palette.secondary.dark,
+    textTransform: 'none',
+    fontSize: '1rem',
+    fontFamily: 'Roboto, sans-serif',
+    fontWeight: 700,
+    '&:hover': {
+      color: theme.palette.secondary.main
+    }
+  },
   appbar: {
     boxShadow: theme.shadows[0]
     // zIndex: theme.zIndex.drawer + 1

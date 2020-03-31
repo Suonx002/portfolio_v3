@@ -52,7 +52,8 @@ const ShowcaseCard = ({ project }) => {
       direction='column'
       alignItems='center'
       justify='center'
-      md>
+      lg={4}
+      md={6}>
       <Grid item className={classes.gridContainerItem}>
         <Card className={classes.cardContainer}>
           <CardActionArea>

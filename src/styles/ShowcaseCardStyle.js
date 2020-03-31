@@ -8,16 +8,17 @@ export default makeStyles(theme => ({
     }
   },
   cardContainer: {
-    maxWidth: 650,
+    maxWidth: 600,
     color: theme.palette.primary.main,
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       width: '100%'
     }
   },
   mediaContainer: {
-    height: 250,
+    height: 350,
+    // objectFit: 'contained',
     [theme.breakpoints.down('xs')]: {
-      height: 200
+      height: 300
     }
   },
   dialogContainer: {
