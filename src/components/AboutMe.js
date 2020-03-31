@@ -1,5 +1,5 @@
 import React from 'react';
-import ScrollableAnchor from 'react-scrollable-anchor';
+import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 
 import Slide from '@material-ui/core/Slide';
 import Paper from '@material-ui/core/Paper';
@@ -11,6 +11,8 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import sprite from '../assets/img/sprite.svg';
 
 import useStyles from '../styles/AboutMeStyle';
+
+configureAnchors({ offset: -200, scrollDuration: 600 });
 
 const LightTooltip = withStyles(theme => ({
   tooltip: {

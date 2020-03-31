@@ -45,7 +45,7 @@ const Navbar = props => {
     },
     {
       name: 'Portfolio',
-      link: '#footer',
+      link: '#portfolio',
       activeIndex: 2
     },
     {

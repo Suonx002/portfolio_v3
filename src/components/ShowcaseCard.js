@@ -73,13 +73,13 @@ const ShowcaseCard = ({ project }) => {
           <Divider />
           <CardActions>
             <Button
-              size={matchesXS ? 'small' : undefined}
+              size={matchesXS ? 'medium' : 'large'}
               color='primary'
               variant='contained'>
               Live Demo
             </Button>
             <Button
-              size={matchesXS ? 'small' : undefined}
+              size={matchesXS ? 'medium' : 'large'}
               color='primary'
               variant='outlined'
               onClick={handleDialogOpen}>
@@ -131,15 +131,15 @@ const ShowcaseCard = ({ project }) => {
           <DialogActions>
             <Button
               className={classes.dialogButton}
-              size={matchesXS ? 'small' : undefined}
+              size={matchesXS ? 'medium' : 'large'}
               onClick={handleDialogClose}
               color='primary'
-              variant='outlined'>
+              variant='contained'>
               Live Demo
             </Button>
             <Button
               className={classes.dialogButton}
-              size={matchesXS ? 'small' : undefined}
+              size={matchesXS ? 'medium' : 'large'}
               onClick={handleDialogClose}
               color='primary'
               variant='outlined'>
@@ -147,7 +147,7 @@ const ShowcaseCard = ({ project }) => {
             </Button>
             <Button
               className={classes.dialogButton}
-              size={matchesXS ? 'small' : undefined}
+              size={matchesXS ? 'medium' : 'large'}
               onClick={handleDialogClose}
               color='primary'
               variant='outlined'>

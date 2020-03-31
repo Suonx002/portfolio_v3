@@ -15,6 +15,7 @@ const Homepage = () => {
   const theme = useTheme();
 
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
+  const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
   return (
     <div className={classes.homepageContainer}>
       <Grow
@@ -44,7 +45,7 @@ const Homepage = () => {
               <Button
                 variant='outlined'
                 color='secondary'
-                size='large'
+                size={matchesXS ? 'medium' : 'large'}
                 className={classes.getInTouch}>
                 Get In Touch
               </Button>

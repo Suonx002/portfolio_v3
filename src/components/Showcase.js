@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
@@ -61,21 +62,23 @@ const Showcase = () => {
   const classes = useStyles();
 
   return (
-    <Grid
-      container
-      direction='column'
-      className={classes.showCaseContainerMargin}>
-      <Grid item style={{ marginBottom: '2rem' }}>
-        <Typography variant='h3'>Portfolio</Typography>
+    <ScrollableAnchor id='portfolio'>
+      <Grid
+        container
+        direction='column'
+        className={classes.showCaseContainerMargin}>
+        <Grid item style={{ marginBottom: '2rem' }}>
+          <Typography variant='h3'>Portfolio</Typography>
+        </Grid>
+        {/* portoflio container */}
+        <Grid item container justify='center' alignItems='center'>
+          {/* portfolio itself */}
+          {projects.map(project => (
+            <ShowcaseCard key={project.title} project={project} />
+          ))}
+        </Grid>
       </Grid>
-      {/* portoflio container */}
-      <Grid item container justify='center' alignItems='center'>
-        {/* portfolio itself */}
-        {projects.map(project => (
-          <ShowcaseCard key={project.title} project={project} />
-        ))}
-      </Grid>
-    </Grid>
+    </ScrollableAnchor>
   );
 };
 
