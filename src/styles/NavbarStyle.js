@@ -13,12 +13,26 @@ export default makeStyles(theme => ({
   },
   resumeButton: {
     color: theme.palette.secondary.dark,
+    border: `1px solid ${theme.palette.secondary.dark}`,
+    minWidth: 10,
     textTransform: 'none',
     fontSize: '1rem',
     fontFamily: 'Roboto, sans-serif',
     fontWeight: 700,
+    zIndex: 2000,
+
     '&:hover': {
-      color: theme.palette.secondary.main
+      color: theme.palette.secondary.main,
+      border: `1px solid ${theme.palette.secondary.main}`
+    }
+  },
+  resumeItem: {
+    ...theme.typography.tab,
+    textAlign: 'center',
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.secondary.main,
+    ' &:hover': {
+      backgroundColor: theme.palette.primary.light
     }
   },
   appbar: {

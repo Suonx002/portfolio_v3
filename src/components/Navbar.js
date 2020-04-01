@@ -58,31 +58,33 @@ const Navbar = props => {
   ];
 
   const tabs = (
-    <Tabs value={value} onChange={handleTabsChange} indicatorColor='primary'>
-      {routes.map((route, index) => (
+    <Fragment>
+      <Tabs value={value} onChange={handleTabsChange} indicatorColor='primary'>
+        {routes.map((route, index) => (
+          <Tab
+            key={`${route}-${index}`}
+            className={classes.tab}
+            label={route.name}
+            component={Link}
+            // href={route.link}
+            to={route.link}
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={600}
+            disableRipple
+          />
+        ))}
         <Tab
-          key={`${route}-${index}`}
-          className={classes.tab}
-          label={route.name}
-          component={Link}
-          // href={route.link}
-          to={route.link}
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={600}
-          disableRipple
+          label='Resume'
+          component={'a'}
+          href='https://www.google.com/'
+          target='_blank'
+          className={classes.resumeButton}
+          onClick={() => setValue(0)}
         />
-      ))}
-      {/* <Tab label='Resume' component='button' className={classes.resumeButton} /> */}
-      <Button
-        variant='outlined'
-        color='secondary'
-        className={classes.resumeButton}>
-        Resume
-      </Button>
-      >
-    </Tabs>
+      </Tabs>
+    </Fragment>
   );
 
   const drawer = (
@@ -138,8 +140,19 @@ const Navbar = props => {
             </ListItem>
           ))}
 
-          <ListItem button divider className={classes.listItem}>
-            Resume
+          <ListItem
+            button
+            divider
+            className={classes.resumeItem}
+            component='a'
+            href='https://www.google.com'
+            target='_blank'>
+            <ListItemText
+              Resume
+              primary={'Resume'}
+
+              // disableTypography
+            />
           </ListItem>
         </List>
       </SwipeableDrawer>
