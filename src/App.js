@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -32,6 +33,13 @@ function App() {
 
   return (
     <div className={classes.bodyContainer} id='home' name='home'>
+      <Helmet>
+        <link rel='canonical' href='vuthysuon.com' />
+        <meta property='og:locale' content='en_US' />
+        <meta property='og:image:secure_url' content='/landing_page.png' />
+        <meta property='og:image:width' content='1280' />
+        <meta property='og:image:height' content='720' />
+      </Helmet>
       <Navbar value={value} setValue={setValue} />
       <Container
         maxWidth='xl'
