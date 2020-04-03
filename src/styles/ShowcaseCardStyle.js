@@ -61,7 +61,9 @@ export default makeStyles(theme => ({
     textTransform: 'none',
     [theme.breakpoints.down('xs')]: {
       width: '100%',
-      marginBottom: '1rem'
+      '&:not(:last-child)': {
+        marginBottom: '0.5rem'
+      }
     }
   }
 }));

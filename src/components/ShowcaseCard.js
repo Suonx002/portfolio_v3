@@ -137,6 +137,7 @@ const ShowcaseCard = ({ project }) => {
           <Divider />
           <DialogActions className={classes.dialogActions}>
             <Button
+              style={{ marginRight: matchesXS ? '0' : '0.5rem' }}
               className={classes.dialogButton}
               size={matchesXS ? undefined : 'large'}
               onClick={handleDialogClose}
@@ -148,6 +149,7 @@ const ShowcaseCard = ({ project }) => {
             </Button>
             {videoDemo && videoDemo.length > 1 && (
               <Button
+                style={{ marginRight: matchesXS ? '0' : '0.5rem' }}
                 className={classes.dialogButton}
                 size={matchesXS ? undefined : 'large'}
                 href={liveDemo}
