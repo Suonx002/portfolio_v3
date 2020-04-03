@@ -78,6 +78,14 @@ export default createMuiTheme({
       root: {
         backgroundPosition: 'top'
       }
+    },
+    MuiDialogActions: {
+      spacing: {
+        marginRight: 0,
+        '& > :not(:first-child)': {
+          marginLeft: 0
+        }
+      }
     }
   }
 });

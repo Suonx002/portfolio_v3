@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {v4 as uuidv4} from 'uuid';
+import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
@@ -17,7 +17,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import Divider from '@material-ui/core/Divider';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import {useTheme} from '@material-ui/core/styles';
+import { useTheme } from '@material-ui/core/styles';
 
 import useStyles from '../styles/ShowcaseCardStyle';
 
@@ -25,7 +25,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction='up' ref={ref} {...props} />;
 });
 
-const ShowcaseCard = ({project}) => {
+const ShowcaseCard = ({ project }) => {
   const {
     title,
     description,
@@ -138,7 +138,7 @@ const ShowcaseCard = ({project}) => {
           <DialogActions className={classes.dialogActions}>
             <Button
               className={classes.dialogButton}
-              size={matchesXS ? 'medium' : 'large'}
+              size={matchesXS ? undefined : 'large'}
               onClick={handleDialogClose}
               href={liveDemo}
               target='_blank'
@@ -149,7 +149,7 @@ const ShowcaseCard = ({project}) => {
             {videoDemo && videoDemo.length > 1 && (
               <Button
                 className={classes.dialogButton}
-                size={matchesXS ? 'medium' : 'large'}
+                size={matchesXS ? undefined : 'large'}
                 href={liveDemo}
                 target='_blank'
                 onClick={handleDialogClose}
@@ -161,7 +161,7 @@ const ShowcaseCard = ({project}) => {
             {sourceCode && sourceCode.length > 1 && (
               <Button
                 className={classes.dialogButton}
-                size={matchesXS ? 'medium' : 'large'}
+                size={matchesXS ? undefined : 'large'}
                 onClick={handleDialogClose}
                 href={sourceCode}
                 target='_blank'
