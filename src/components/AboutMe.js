@@ -1,6 +1,7 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
-import Slide from '@material-ui/core/Slide';
+// import Slide from '@material-ui/core/Slide';
 import Paper from '@material-ui/core/Paper';
 import { withStyles, useTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -62,44 +63,38 @@ const AboutMe = () => {
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <Slide
-      direction='left'
-      in
-      mountOnEnter
-      unmountOnExit
-      timeout={{ enter: matchesSM ? 0 : 1000, exit: matchesSM ? 0 : 1000 }}>
-      {/* about me info */}
+    <Grid
+      id='aboutme'
+      container
+      justify='space-between'
+      className={classes.aboutMeContainerMargin}>
       <Grid
-        id='aboutme'
+        item
         container
-        justify='space-between'
-        className={classes.aboutMeContainerMargin}>
+        md={5}
+        direction='column'
+        className={classes.gridItemContainerMargin}>
+        <Grid item className={classes.gridItemMarginBottom}>
+          <Typography variant='h3'>About Me</Typography>
+        </Grid>
         <Grid
           item
-          container
-          md={5}
-          direction='column'
-          className={classes.gridItemContainerMargin}>
-          <Grid item className={classes.gridItemMarginBottom}>
-            <Typography variant='h3'>About Me</Typography>
-          </Grid>
-          <Grid
-            item
-            className={classes.aboutMeInfo}
-            style={{ marginBottom: '2rem' }}>
-            <Typography variant='body1' className={classes.infoText}>
-              Hello! I'm a software developer with a background in information
-              technology infrastructure. Self-driven, adaptable learner, and
-              constantly striving to learn and understand various programming
-              technologies to build modern websites.
-            </Typography>
-          </Grid>
+          className={classes.aboutMeInfo}
+          style={{ marginBottom: '2rem' }}>
+          <Typography variant='body1' className={classes.infoText}>
+            Hello! I'm a software developer with a background in information
+            technology infrastructure. Self-driven, adaptable learner, and
+            constantly striving to learn and understand various programming
+            technologies to build modern websites.
+          </Typography>
         </Grid>
-        <Grid item container md={6} direction='column'>
-          <Grid item className={classes.gridItemMarginBottom}>
-            <Typography variant='h3'>Experience With</Typography>
-          </Grid>
-          <Grid item container>
+      </Grid>
+      <Grid item container md={6} direction='column'>
+        <Grid item className={classes.gridItemMarginBottom}>
+          <Typography variant='h3'>Experience With</Typography>
+        </Grid>
+        <Grid item container>
+          <LazyLoad height={200} offset={150}>
             {icons.map((icon, index) => (
               <Grid item key={`${icon}-${index}`} xs={6} sm={3}>
                 <Paper className={classes.cardContainer} elevation={2}>
@@ -111,10 +106,10 @@ const AboutMe = () => {
                 </Paper>
               </Grid>
             ))}
-          </Grid>
+          </LazyLoad>
         </Grid>
       </Grid>
-    </Slide>
+    </Grid>
   );
 };
 
