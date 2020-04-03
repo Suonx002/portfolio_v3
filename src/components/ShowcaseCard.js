@@ -61,6 +61,7 @@ const ShowcaseCard = ({ project }) => {
             <CardMedia
               component={'a'}
               href={liveDemo}
+              rel='noopener noreferrer'
               target='_blank'
               className={classes.mediaContainer}
               image={imageLink}
@@ -83,6 +84,7 @@ const ShowcaseCard = ({ project }) => {
               size={matchesXS ? 'medium' : 'large'}
               color='primary'
               href={liveDemo}
+              rel='noopener noreferrer'
               target='_blank'
               variant='contained'>
               Live Demo
@@ -148,6 +150,7 @@ const ShowcaseCard = ({ project }) => {
               size={matchesXS ? undefined : 'large'}
               onClick={handleDialogClose}
               href={liveDemo}
+              rel='noopener noreferrer'
               target='_blank'
               color='primary'
               variant='outlined'>
@@ -161,6 +164,7 @@ const ShowcaseCard = ({ project }) => {
                 className={classes.dialogButton}
                 size={matchesXS ? undefined : 'large'}
                 href={liveDemo}
+                rel='noopener noreferrer'
                 target='_blank'
                 onClick={handleDialogClose}
                 color='primary'
@@ -176,6 +180,7 @@ const ShowcaseCard = ({ project }) => {
                 size={matchesXS ? undefined : 'large'}
                 onClick={handleDialogClose}
                 href={sourceCode}
+                rel='noopener noreferrer'
                 target='_blank'
                 color='primary'
                 variant='outlined'>

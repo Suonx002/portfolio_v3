@@ -15,22 +15,22 @@ const icons = [
   {
     name: 'Github',
     link: 'https://github.com/Suonx002',
-    icon: GitHubIcon
+    icon: GitHubIcon,
   },
   {
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/suonx002/',
-    icon: LinkedInIcon
-  }
+    icon: LinkedInIcon,
+  },
 ];
 
-const LightTooltip = withStyles(theme => ({
+const LightTooltip = withStyles((theme) => ({
   tooltip: {
     color: theme.palette.primary.main,
     backgroundColor: theme.palette.common.white,
     boxShadow: theme.shadows[1],
-    fontSize: 13
-  }
+    fontSize: 13,
+  },
 }))(Tooltip);
 
 const Footer = () => {
@@ -48,6 +48,7 @@ const Footer = () => {
               <IconButton
                 className={classes.buttonContainer}
                 href={item.link}
+                rel='noopener noreferrer'
                 target='_blank'>
                 <item.icon className={classes.icon} />
               </IconButton>

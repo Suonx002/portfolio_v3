@@ -35,6 +35,7 @@ const Contact = (props) => {
           <Button
             role='button'
             aria-label='Email'
+            rel='noopener noreferrer'
             href='mailto:admin@vuthysuon.com'
             variant='outlined'
             color='secondary'

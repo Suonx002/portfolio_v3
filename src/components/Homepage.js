@@ -41,6 +41,7 @@ const Homepage = () => {
             </Grid>
             <Grid item className={classes.gridItemMarginBottom}>
               <Button
+                rel='noopener noreferrer'
                 role='button'
                 aria-label='Email'
                 href='mailto:admin@vuthysuon.com'

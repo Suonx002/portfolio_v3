@@ -78,6 +78,7 @@ const Navbar = (props) => {
           label='Resume'
           component={'a'}
           href='https://drive.google.com/file/d/1BnFDjnrBPeMhduVygF5BuRKRbXjNGmCk/view?usp=sharing'
+          rel='noopener noreferrer'
           target='_blank'
           className={classes.resumeButton}
           onClick={() => setValue(0)}
@@ -147,6 +148,7 @@ const Navbar = (props) => {
             className={classes.resumeItem}
             component='a'
             href='https://drive.google.com/file/d/1BnFDjnrBPeMhduVygF5BuRKRbXjNGmCk/view?usp=sharing'
+            rel='noopener noreferrer'
             target='_blank'>
             <ListItemText
               primary={'Resume'}
