@@ -17,8 +17,7 @@ const projects = [
       'Disney Solo is a movie app for users to search for their favorite movies, watch trailers, and find most treading movies. ',
     longDescription: 'empty empty empty testing place',
     imageLink: portfolio_1,
-    gifLink:
-      'https://camo.githubusercontent.com/0ed64b605dfebd77030d6f6004d7a2ae0bc44217/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6858506b324e586f6444724f63396b454e792f67697068792e676966',
+    gifLink: '',
     liveDemo: 'https://disneysolo.netlify.com/',
     videoDemo: '',
     sourceCode: 'https://github.com/Suonx002/DisneySolo',
@@ -51,8 +50,7 @@ const projects = [
       'Entry Level is a job aggregator for entry-level positions targeting interns, students, grads, career changers, and more.',
     longDescription: 'empty empty empty testing place',
     imageLink: portfolio_3,
-    gifLink:
-      'https://camo.githubusercontent.com/0ed64b605dfebd77030d6f6004d7a2ae0bc44217/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6858506b324e586f6444724f63396b454e792f67697068792e676966',
+    gifLink: '',
     liveDemo: 'https://entrylevel.io/',
     videoDemo: '',
     sourceCode: '',

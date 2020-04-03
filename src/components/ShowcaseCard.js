@@ -112,7 +112,7 @@ const ShowcaseCard = ({ project }) => {
           <Divider />
           <DialogContent>
             <img
-              src={gifLink}
+              src={gifLink.length > 1 ? gifLink : imageLink}
               alt={title}
               className={classes.dialogImageContainer}
             />
