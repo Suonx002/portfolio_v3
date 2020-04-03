@@ -37,8 +37,8 @@ const projects = [
     techStacks: [
       'React',
       'Redux',
-      'Material-UI',
       'Node',
+      'Material-UI',
       'Express',
       'MongoDB',
       'Mongoose'
@@ -67,7 +67,7 @@ const Showcase = () => {
       container
       direction='column'
       className={classes.showCaseContainerMargin}>
-      <Grid item style={{ marginBottom: '2rem' }}>
+      <Grid item style={{marginBottom: '2rem'}}>
         <Typography variant='h3'>Portfolio</Typography>
       </Grid>
       {/* portoflio container */}

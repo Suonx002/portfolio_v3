@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 
 export default makeStyles(theme => ({
   gridContainerItem: {
@@ -51,7 +51,17 @@ export default makeStyles(theme => ({
     marginRight: '1rem',
     padding: '0.5rem 0.5rem 0.5rem 0'
   },
+  dialogActions: {
+    [theme.breakpoints.down('xs')]: {
+      display: 'flex',
+      flexDirection: 'column'
+    }
+  },
   dialogButton: {
-    textTransform: 'none'
+    textTransform: 'none',
+    [theme.breakpoints.down('xs')]: {
+      width: '100%',
+      marginBottom: '1rem'
+    }
   }
 }));
