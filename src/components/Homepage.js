@@ -36,7 +36,7 @@ const Homepage = () => {
             </Grid>
             <Grid item className={classes.gridItemMarginBottom}>
               <Typography variant='h3' className={classes.infoText}>
-                a software engineer based in Minneapolis, MN.
+                a software developer based in Minneapolis, MN.
               </Typography>
             </Grid>
             <Grid item className={classes.gridItemMarginBottom}>
