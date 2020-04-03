@@ -28,7 +28,8 @@ export default makeStyles(theme => ({
   dialogImageContainer: {
     height: 250,
     width: '100%',
-    marginBottom: '1rem'
+    marginBottom: '1rem',
+    objectFit: 'cover'
   },
   dialogTitle: {
     textAlign: 'center'

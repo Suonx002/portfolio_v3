@@ -33,6 +33,7 @@ const Contact = props => {
         </Grid>
         <Grid item className={classes.contactItem}>
           <Button
+            href='mailto:admin@vuthysuon.com'
             variant='outlined'
             color='secondary'
             size='large'

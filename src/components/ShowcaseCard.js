@@ -33,7 +33,8 @@ const ShowcaseCard = ({ project }) => {
     liveDemo,
     videoDemo,
     sourceCode,
-    techStacks
+    techStacks,
+    gifLink
   } = project;
 
   const classes = useStyles();
@@ -58,6 +59,9 @@ const ShowcaseCard = ({ project }) => {
         <Card className={classes.cardContainer}>
           <CardActionArea>
             <CardMedia
+              component={'a'}
+              href={liveDemo}
+              target='_blank'
               className={classes.mediaContainer}
               image={imageLink}
               title={title}
@@ -76,6 +80,8 @@ const ShowcaseCard = ({ project }) => {
             <Button
               size={matchesXS ? 'medium' : 'large'}
               color='primary'
+              href={liveDemo}
+              target='_blank'
               variant='contained'>
               Live Demo
             </Button>
@@ -106,7 +112,7 @@ const ShowcaseCard = ({ project }) => {
           <Divider />
           <DialogContent>
             <img
-              src={imageLink}
+              src={gifLink}
               alt={title}
               className={classes.dialogImageContainer}
             />
@@ -134,6 +140,8 @@ const ShowcaseCard = ({ project }) => {
               className={classes.dialogButton}
               size={matchesXS ? 'medium' : 'large'}
               onClick={handleDialogClose}
+              href={liveDemo}
+              target='_blank'
               color='primary'
               variant='contained'>
               Live Demo
@@ -142,6 +150,8 @@ const ShowcaseCard = ({ project }) => {
               <Button
                 className={classes.dialogButton}
                 size={matchesXS ? 'medium' : 'large'}
+                href={liveDemo}
+                target='_blank'
                 onClick={handleDialogClose}
                 color='primary'
                 variant='outlined'>
@@ -153,6 +163,8 @@ const ShowcaseCard = ({ project }) => {
                 className={classes.dialogButton}
                 size={matchesXS ? 'medium' : 'large'}
                 onClick={handleDialogClose}
+                href={sourceCode}
+                target='_blank'
                 color='primary'
                 variant='outlined'>
                 Source Code

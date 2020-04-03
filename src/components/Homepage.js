@@ -41,6 +41,7 @@ const Homepage = () => {
             </Grid>
             <Grid item className={classes.gridItemMarginBottom}>
               <Button
+                href='mailto:admin@vuthysuon.com'
                 variant='outlined'
                 color='secondary'
                 size={matchesXS ? 'medium' : 'large'}

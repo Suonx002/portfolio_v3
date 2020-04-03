@@ -14,7 +14,7 @@ const projects = [
   {
     title: 'DisneySolo',
     description:
-      'Disney Solo is a movie application that allow users to search for their favorite movies. ',
+      'Disney Solo is a movie app for users to search for their favorite movies, watch trailers, and find most treading movies. ',
     longDescription: 'empty empty empty testing place',
     imageLink: portfolio_1,
     gifLink:
@@ -27,7 +27,7 @@ const projects = [
   {
     title: 'WebResources',
     description:
-      'Web Resources is a web app for sharing their favorites online tutorials and courses.',
+      'Web Resources is a web app targeting beginner to intermediate users to share their favorite online courses and tutorials.',
     longDescription: 'empty empty empty testing place',
     imageLink: portfolio_2,
     gifLink:
@@ -48,7 +48,7 @@ const projects = [
   {
     title: 'EntryLevel',
     description:
-      'Entry Level is a job aggregator for entry-level positions targeting students, grads, career changers, and more.',
+      'Entry Level is a job aggregator for entry-level positions targeting interns, students, grads, career changers, and more.',
     longDescription: 'empty empty empty testing place',
     imageLink: portfolio_3,
     gifLink:

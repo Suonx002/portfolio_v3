@@ -21,9 +21,10 @@ export default makeStyles(theme => ({
     fontFamily: 'Roboto, sans-serif',
     fontWeight: 700,
     zIndex: 2000,
+    opacity: 0.95,
 
     '&:hover': {
-      color: theme.palette.secondary.main,
+      // color: theme.palette.secondary.main,
       border: `1px solid ${theme.palette.secondary.main}`
     }
   },

@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -14,7 +14,6 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
-import Button from '@material-ui/core/Button';
 
 import useStyles from '../styles/NavbarStyle';
 import logo from '../assets/img/logo_white.png';
@@ -78,7 +77,7 @@ const Navbar = props => {
         <Tab
           label='Resume'
           component={'a'}
-          href='https://www.google.com/'
+          href='https://drive.google.com/file/d/1BnFDjnrBPeMhduVygF5BuRKRbXjNGmCk/view?usp=sharing'
           target='_blank'
           className={classes.resumeButton}
           onClick={() => setValue(0)}
@@ -145,10 +144,9 @@ const Navbar = props => {
             divider
             className={classes.resumeItem}
             component='a'
-            href='https://www.google.com'
+            href='https://drive.google.com/file/d/1BnFDjnrBPeMhduVygF5BuRKRbXjNGmCk/view?usp=sharing'
             target='_blank'>
             <ListItemText
-              Resume
               primary={'Resume'}
 
               // disableTypography
@@ -178,7 +176,13 @@ const Navbar = props => {
     <Fragment>
       <AppBar postion='static' color='primary' className={classes.appbar}>
         <Toolbar>
-          <IconButton className={classes.logoContainer} disableRipple>
+          <IconButton
+            className={classes.logoContainer}
+            disableRipple
+            onClick={() => {
+              scroll.scrollToTop();
+              setValue(0);
+            }}>
             <img src={logo} alt='logo' className={classes.logo} />
           </IconButton>
           <div className={classes.rightMenu}>{matchesSM ? drawer : tabs}</div>
