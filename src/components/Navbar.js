@@ -18,7 +18,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import useStyles from '../styles/NavbarStyle';
 import logo from '../assets/img/logo_white.png';
 
-const Navbar = props => {
+const Navbar = (props) => {
   const classes = useStyles();
   const theme = useTheme();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -37,23 +37,23 @@ const Navbar = props => {
     {
       name: 'Home',
       link: 'home',
-      activeIndex: 0
+      activeIndex: 0,
     },
     {
       name: 'About Me',
       link: 'aboutme',
-      activeIndex: 1
+      activeIndex: 1,
     },
     {
       name: 'Portfolio',
       link: 'portfolio',
-      activeIndex: 2
+      activeIndex: 2,
     },
     {
       name: 'Contact',
       link: 'contact',
-      activeIndex: 3
-    }
+      activeIndex: 3,
+    },
   ];
 
   const tabs = (
@@ -140,6 +140,8 @@ const Navbar = props => {
           ))}
 
           <ListItem
+            role='button'
+            aria-label='Resume'
             button
             divider
             className={classes.resumeItem}
@@ -158,7 +160,7 @@ const Navbar = props => {
   );
 
   useEffect(() => {
-    [...routes].forEach(route => {
+    [...routes].forEach((route) => {
       switch (window.location.pathname) {
         case route.link:
           if (value !== route.activeIndex) {

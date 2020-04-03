@@ -24,7 +24,7 @@ const Homepage = () => {
         unmountOnExit
         timeout={{
           enter: matchesSM ? 0 : 1000,
-          exit: matchesSM ? 0 : 1000
+          exit: matchesSM ? 0 : 1000,
         }}>
         <Grid container justify='center'>
           <Grid item container md={5} direction='column'>
@@ -41,6 +41,8 @@ const Homepage = () => {
             </Grid>
             <Grid item className={classes.gridItemMarginBottom}>
               <Button
+                role='button'
+                aria-label='Email'
                 href='mailto:admin@vuthysuon.com'
                 variant='outlined'
                 color='secondary'

@@ -34,7 +34,7 @@ const ShowcaseCard = ({ project }) => {
     videoDemo,
     sourceCode,
     techStacks,
-    gifLink
+    gifLink,
   } = project;
 
   const classes = useStyles();
@@ -78,6 +78,8 @@ const ShowcaseCard = ({ project }) => {
           <Divider />
           <CardActions>
             <Button
+              role='button'
+              aria-label='Live Demo'
               size={matchesXS ? 'medium' : 'large'}
               color='primary'
               href={liveDemo}
@@ -86,6 +88,8 @@ const ShowcaseCard = ({ project }) => {
               Live Demo
             </Button>
             <Button
+              role='button'
+              aria-label='View More'
               size={matchesXS ? 'medium' : 'large'}
               color='primary'
               variant='outlined'
@@ -124,7 +128,7 @@ const ShowcaseCard = ({ project }) => {
                 Tech Stacks
               </Typography>
               <ul className={classes.techList}>
-                {techStacks.map(tech => (
+                {techStacks.map((tech) => (
                   <li className={classes.techItem} key={uuidv4()}>
                     <Typography variant='body1'>
                       {tech[0].toUpperCase() + tech.slice(1)}
@@ -137,6 +141,8 @@ const ShowcaseCard = ({ project }) => {
           <Divider />
           <DialogActions className={classes.dialogActions}>
             <Button
+              role='button'
+              aria-label='Live Demo'
               style={{ marginRight: matchesXS ? '0' : '0.5rem' }}
               className={classes.dialogButton}
               size={matchesXS ? undefined : 'large'}
@@ -149,6 +155,8 @@ const ShowcaseCard = ({ project }) => {
             </Button>
             {videoDemo && videoDemo.length > 1 && (
               <Button
+                role='button'
+                aria-label='Video Demo'
                 style={{ marginRight: matchesXS ? '0' : '0.5rem' }}
                 className={classes.dialogButton}
                 size={matchesXS ? undefined : 'large'}
@@ -162,6 +170,8 @@ const ShowcaseCard = ({ project }) => {
             )}
             {sourceCode && sourceCode.length > 1 && (
               <Button
+                role='button'
+                aria-label='Source Code'
                 className={classes.dialogButton}
                 size={matchesXS ? undefined : 'large'}
                 onClick={handleDialogClose}

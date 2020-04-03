@@ -10,7 +10,7 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 import useStyles from '../styles/ContactStyle';
 
-const Contact = props => {
+const Contact = (props) => {
   const classes = useStyles();
   const { setValue } = props;
 
@@ -33,6 +33,8 @@ const Contact = props => {
         </Grid>
         <Grid item className={classes.contactItem}>
           <Button
+            role='button'
+            aria-label='Email'
             href='mailto:admin@vuthysuon.com'
             variant='outlined'
             color='secondary'
@@ -44,6 +46,8 @@ const Contact = props => {
       </Grid>
       <div className={classes.goBackHomeContainer}>
         <IconButton
+          role='button'
+          aria-label='icon'
           size='medium'
           className={classes.iconContainer}
           color='secondary'
