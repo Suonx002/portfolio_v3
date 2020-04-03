@@ -32,7 +32,7 @@ const ShowcaseCard = ({ project }) => {
     imageLink,
     liveDemo,
     videoDemo,
-    source,
+    sourceCode,
     techStacks
   } = project;
 
@@ -138,22 +138,26 @@ const ShowcaseCard = ({ project }) => {
               variant='contained'>
               Live Demo
             </Button>
-            <Button
-              className={classes.dialogButton}
-              size={matchesXS ? 'medium' : 'large'}
-              onClick={handleDialogClose}
-              color='primary'
-              variant='outlined'>
-              Video Demo
-            </Button>
-            <Button
-              className={classes.dialogButton}
-              size={matchesXS ? 'medium' : 'large'}
-              onClick={handleDialogClose}
-              color='primary'
-              variant='outlined'>
-              Source Code
-            </Button>
+            {videoDemo && videoDemo.length > 1 && (
+              <Button
+                className={classes.dialogButton}
+                size={matchesXS ? 'medium' : 'large'}
+                onClick={handleDialogClose}
+                color='primary'
+                variant='outlined'>
+                Video Demo
+              </Button>
+            )}
+            {sourceCode && sourceCode.length > 1 && (
+              <Button
+                className={classes.dialogButton}
+                size={matchesXS ? 'medium' : 'large'}
+                onClick={handleDialogClose}
+                color='primary'
+                variant='outlined'>
+                Source Code
+              </Button>
+            )}
           </DialogActions>
         </Dialog>
       </Grid>

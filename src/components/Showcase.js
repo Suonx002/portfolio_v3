@@ -12,47 +12,51 @@ import portfolio_3 from '../assets/img/portfolio_3.png';
 
 const projects = [
   {
-    title: 'Testing 1',
+    title: 'DisneySolo',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta suscipit id aspernatur dolore quibusdam quo temporibus molestias qui, numquam atque iure est voluptates, voluptate consectetur',
+      'Disney Solo is a movie application that allow users to search for their favorite movies. ',
+    longDescription: 'empty empty empty testing place',
     imageLink: portfolio_1,
-
-    gifLink: 'google.com',
-    liveDemo:
-      'https://www.pexels.com/photo/aerial-photo-of-cityscape-at-night-2362004/',
-    videoDemo:
-      'https://www.pexels.com/photo/aerial-photo-of-cityscape-at-night-2362004/',
-    source:
-      'https://www.pexels.com/photo/aerial-photo-of-cityscape-at-night-2362004/',
-    techStacks: ['html5', 'css', 'javascript', 'react']
+    gifLink:
+      'https://camo.githubusercontent.com/0ed64b605dfebd77030d6f6004d7a2ae0bc44217/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6858506b324e586f6444724f63396b454e792f67697068792e676966',
+    liveDemo: 'https://disneysolo.netlify.com/',
+    videoDemo: '',
+    sourceCode: 'https://github.com/Suonx002/DisneySolo',
+    techStacks: ['React', 'Redux', 'Sass']
   },
   {
-    title: 'Testing 2',
+    title: 'WebResources',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta suscipit id aspernatur dolore quibusdam quo temporibus molestias qui, numquam atque iure est voluptates, voluptate consectetur',
+      'Web Resources is a web app for sharing their favorites online tutorials and courses.',
+    longDescription: 'empty empty empty testing place',
     imageLink: portfolio_2,
-    gifLink: 'google.com',
-    liveDemo:
-      'https://www.pexels.com/photo/aerial-photo-of-cityscape-at-night-2362004/',
-    videoDemo:
-      'https://www.pexels.com/photo/aerial-photo-of-cityscape-at-night-2362004/',
-    source:
-      'https://www.pexels.com/photo/aerial-photo-of-cityscape-at-night-2362004/',
-    techStacks: ['html5', 'css', 'javascript', 'react']
+    gifLink:
+      'https://camo.githubusercontent.com/0ed64b605dfebd77030d6f6004d7a2ae0bc44217/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6858506b324e586f6444724f63396b454e792f67697068792e676966',
+    liveDemo: 'https://webresources.herokuapp.com/',
+    videoDemo: 'https://www.youtube.com/watch?v=pSWlTuGREMw&feature=youtu.be',
+    sourceCode: 'https://github.com/Suonx002/WebResources',
+    techStacks: [
+      'React',
+      'Redux',
+      'Material-UI',
+      'Node',
+      'Express',
+      'MongoDB',
+      'Mongoose'
+    ]
   },
   {
-    title: 'Testing 3',
+    title: 'EntryLevel',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta suscipit id aspernatur dolore quibusdam quo temporibus molestias qui, numquam atque iure est voluptates, voluptate consectetur',
+      'Entry Level is a job aggregator for entry-level positions targeting students, grads, career changers, and more.',
+    longDescription: 'empty empty empty testing place',
     imageLink: portfolio_3,
-    gifLink: 'google.com',
-    liveDemo:
-      'https://www.pexels.com/photo/aerial-photo-of-cityscape-at-night-2362004/',
-    videoDemo:
-      'https://www.pexels.com/photo/aerial-photo-of-cityscape-at-night-2362004/',
-    source:
-      'https://www.pexels.com/photo/aerial-photo-of-cityscape-at-night-2362004/',
-    techStacks: ['html5', 'css', 'javascript', 'react']
+    gifLink:
+      'https://camo.githubusercontent.com/0ed64b605dfebd77030d6f6004d7a2ae0bc44217/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6858506b324e586f6444724f63396b454e792f67697068792e676966',
+    liveDemo: 'https://entrylevel.io/',
+    videoDemo: '',
+    sourceCode: '',
+    techStacks: ['React', 'Context API', 'Semantic UI', 'PostgreSQL']
   }
 ];
 

@@ -27,7 +27,8 @@ export default makeStyles(theme => ({
   },
   dialogImageContainer: {
     height: 250,
-    width: '100%'
+    width: '100%',
+    marginBottom: '1rem'
   },
   dialogTitle: {
     textAlign: 'center'
@@ -41,6 +42,7 @@ export default makeStyles(theme => ({
   },
   techList: {
     display: 'flex',
+    flexWrap: 'wrap',
     paddingLeft: '1rem',
     margin: 0
   },

@@ -12,7 +12,8 @@ export default makeStyles(theme => ({
     // }
   },
   resumeButton: {
-    color: theme.palette.secondary.dark,
+    marginLeft: '25px',
+    color: theme.palette.secondary.main,
     border: `1px solid ${theme.palette.secondary.dark}`,
     minWidth: 10,
     textTransform: 'none',
