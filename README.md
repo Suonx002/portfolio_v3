@@ -7,10 +7,10 @@
 ## Google Lighthouse Audit
 
 - Desktop
-  ![Performance](./img/audit_desktop.png)
+  ![Performance](https://res.cloudinary.com/dk9fdcnnp/image/upload/v1585967150/WebResources/mhltnagj57xaxplezsqq.png)
 
 - Mobile
-  ![Performance](./img/audit_mobile.png)
+  ![Performance](https://res.cloudinary.com/dk9fdcnnp/image/upload/v1585967150/WebResources/yatg64prulot9mkpmo6d.png)
 
 ## Built with
 
