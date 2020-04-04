@@ -15,7 +15,6 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import Resume from '../assets/Vuthy_Suon_Resume.pdf';
 import useStyles from '../styles/NavbarStyle';
 import logo from '../assets/img/logo_white.png';
 
@@ -78,7 +77,7 @@ const Navbar = (props) => {
         <Tab
           label='Resume'
           component={'a'}
-          href={Resume}
+          href='https://res.cloudinary.com/dk9fdcnnp/image/upload/v1585976421/goa5nnv1s2zz7mypb7pn.pdf'
           rel='noopener noreferrer'
           target='_blank'
           className={classes.resumeButton}
@@ -148,7 +147,7 @@ const Navbar = (props) => {
             divider
             className={classes.resumeItem}
             component='a'
-            href={Resume}
+            href='https://res.cloudinary.com/dk9fdcnnp/image/upload/v1585976421/goa5nnv1s2zz7mypb7pn.pdf'
             rel='noopener noreferrer'
             target='_blank'>
             <ListItemText
