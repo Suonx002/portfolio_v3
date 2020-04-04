@@ -12,48 +12,48 @@ import sprite from '../assets/img/sprite.svg';
 
 import useStyles from '../styles/AboutMeStyle';
 
-const LightTooltip = withStyles(theme => ({
+const LightTooltip = withStyles((theme) => ({
   tooltip: {
     color: theme.palette.primary.main,
     backgroundColor: theme.palette.common.white,
     boxShadow: theme.shadows[1],
-    fontSize: 13
-  }
+    fontSize: 13,
+  },
 }))(Tooltip);
 
 const icons = [
   {
     name: 'HTML5',
-    link: 'html-5'
+    link: 'html-5',
   },
   {
     name: 'CSS3',
-    link: 'css3'
+    link: 'css3',
   },
   {
     name: 'Sass',
-    link: 'sass'
+    link: 'sass',
   },
   {
     name: 'Material UI',
-    link: 'material-ui'
+    link: 'material-ui',
   },
   {
     name: 'Javascript',
-    link: 'javascript'
+    link: 'javascript',
   },
   {
     name: 'React',
-    link: 'react-native'
+    link: 'react-native',
   },
   {
     name: 'Node',
-    link: 'nodejs'
+    link: 'nodejs',
   },
   {
     name: 'MongoDB',
-    link: 'mongodb'
-  }
+    link: 'mongodb',
+  },
 ];
 
 const AboutMe = () => {
@@ -82,10 +82,10 @@ const AboutMe = () => {
           className={classes.aboutMeInfo}
           style={{ marginBottom: '2rem' }}>
           <Typography variant='body1' className={classes.infoText}>
-            Hello! I'm a software developer with a background in information
-            technology infrastructure. Self-driven, adaptable learner, and
-            constantly striving to learn and understand various programming
-            technologies to build modern websites.
+            Hello! I'm a web developer with a background in information
+            technology infrastructure. Passionate, self-driven, adaptable
+            learner, and constantly striving to learn various programming
+            technologies to build professional and modern websites.
           </Typography>
         </Grid>
       </Grid>

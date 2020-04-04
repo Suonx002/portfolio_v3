@@ -15,19 +15,19 @@ const projects = [
   {
     title: 'DisneySolo',
     description:
-      'Disney Solo is a movie app for users to search for their favorite movies, watch trailers, and find most treading movies. ',
+      'Disney Solo is a movie application that allows users to search for their favorite movies, watch trailers, and discover trending films',
     longDescription: 'empty empty empty testing place',
     imageLink: portfolio_1,
     gifLink: '',
     liveDemo: 'https://disneysolo.netlify.com/',
     videoDemo: '',
     sourceCode: 'https://github.com/Suonx002/DisneySolo',
-    techStacks: ['React', 'Redux', 'Sass']
+    techStacks: ['React', 'Redux', 'Sass'],
   },
   {
     title: 'WebResources',
     description:
-      'Web Resources is a web app targeting beginner to intermediate users to share their favorite online courses and tutorials.',
+      'Web Resources is a web application that allows beginner and intermediate programmers to share learning resources such as online courses and tutorials',
     longDescription: 'empty empty empty testing place',
     imageLink: portfolio_2,
     gifLink:
@@ -42,21 +42,21 @@ const projects = [
       'Material-UI',
       'Express',
       'MongoDB',
-      'Mongoose'
-    ]
+      'Mongoose',
+    ],
   },
   {
     title: 'EntryLevel',
     description:
-      'Entry Level is a job aggregator for entry-level positions targeting interns, students, grads, career changers, and more.',
+      'Entry Level is a career website extension that  aggregates entry-level positions, benefitting students, interns, graduates, career changers, etc. by optimizing the front end experience',
     longDescription: 'empty empty empty testing place',
     imageLink: portfolio_3,
     gifLink: '',
     liveDemo: 'https://entrylevel.io/',
     videoDemo: '',
     sourceCode: '',
-    techStacks: ['React', 'Context API', 'Semantic UI', 'PostgreSQL']
-  }
+    techStacks: ['React', 'Context API', 'Semantic UI', 'PostgreSQL'],
+  },
 ];
 
 const Showcase = () => {
@@ -75,7 +75,7 @@ const Showcase = () => {
         {/* portoflio container */}
         <Grid item container justify='center' alignItems='center'>
           {/* portfolio itself */}
-          {projects.map(project => (
+          {projects.map((project) => (
             <ShowcaseCard key={project.title} project={project} />
           ))}
         </Grid>
