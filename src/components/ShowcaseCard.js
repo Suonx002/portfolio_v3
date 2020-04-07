@@ -163,7 +163,7 @@ const ShowcaseCard = ({ project }) => {
                 style={{ marginRight: matchesXS ? '0' : '0.5rem' }}
                 className={classes.dialogButton}
                 size={matchesXS ? undefined : 'large'}
-                href={liveDemo}
+                href={videoDemo}
                 rel='noopener noreferrer'
                 target='_blank'
                 onClick={handleDialogClose}
