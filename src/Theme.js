@@ -7,85 +7,90 @@ export default createMuiTheme({
   palette: {
     common: {
       primaryColor,
-      secondaryColor
+      secondaryColor,
     },
     primary: {
-      main: primaryColor
+      main: primaryColor,
     },
     secondary: {
-      main: secondaryColor
-    }
+      main: secondaryColor,
+    },
   },
   typography: {
     h1: {
       fontSize: '3rem',
       fontFamily: 'Roboto, sans-serif',
       fontWeight: 700,
-      color: primaryColor
+      color: primaryColor,
     },
     h2: {
       fontSize: '2.5rem',
       fontFamily: 'Roboto, sans-serif',
       fontWeight: 700,
       color: secondaryColor,
-      lineHeight: 1.5
+      lineHeight: 1.5,
     },
     h3: {
       fontSize: '2rem',
       fontFamily: 'Roboto, sans-serif',
       fontWeight: 700,
       color: secondaryColor,
-      lineHeight: 1.5
+      lineHeight: 1.5,
     },
     h4: {
       fontSize: '1.25rem',
       fontFamily: 'Roboto, sans-serif',
       fontWeight: 500,
-      color: primaryColor
+      color: primaryColor,
     },
     h5: {
       fontSize: '1.25rem',
       fontFamily: 'Roboto, sans-serif',
       fontWeight: 500,
-      color: secondaryColor
+      color: secondaryColor,
     },
     h6: {
       fontSize: '1.25rem',
       fontFamily: 'Roboto, sans-serif',
       fontWeight: 500,
-      color: primaryColor
+      color: primaryColor,
     },
     body1: {
       fontSize: '1.1rem',
       fontFamily: 'Roboto, sans-serif',
-      fontWeight: 400
+      fontWeight: 400,
     },
     tab: {
       fontSize: '1rem',
       fontFamily: 'Roboto, sans-serif',
       fontWeight: 700,
       color: primaryColor,
-      textTransform: 'none'
-    }
+      textTransform: 'none',
+    },
   },
   overrides: {
     MuiCardActions: {
       root: {
-        justifyContent: 'flex-end'
-      }
+        justifyContent: 'flex-end',
+      },
     },
     MuiCardMedia: {
       root: {
-        backgroundPosition: 'top'
-      }
+        backgroundPosition: 'top',
+      },
     },
     MuiDialogActions: {
       spacing: {
         marginRight: 0,
         '& > :not(:first-child)': {
-          marginLeft: 0
-        }
-      }
-    }
-  }
+          marginLeft: 0,
+        },
+      },
+    },
+    MuiDialog: {
+      paperScrollPaper: {
+        maxHeight: 'calc(100% - 225px)',
+      },
+    },
+  },
 });
