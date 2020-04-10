@@ -3,6 +3,8 @@ import LazyLoad from 'react-lazyload';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
 
 import useStyles from '../styles/ShowcaseStyle';
 import ShowcaseCard from './ShowcaseCard';
@@ -61,10 +63,12 @@ const projects = [
 
 const Showcase = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
 
   return (
     <div id='portfolio'>
-      <LazyLoad height={200} offset={150}>
+      <LazyLoad height={200} offset={matchesXS ? 75 : 150}>
         <Grid
           container
           direction='column'
