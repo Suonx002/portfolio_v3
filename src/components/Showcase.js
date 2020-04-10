@@ -63,24 +63,25 @@ const Showcase = () => {
   const classes = useStyles();
 
   return (
-    <LazyLoad height={200} offset={150}>
-      <Grid
-        id='portfolio'
-        container
-        direction='column'
-        className={classes.showCaseContainerMargin}>
-        <Grid item style={{ marginBottom: '2rem' }}>
-          <Typography variant='h3'>Portfolio</Typography>
+    <div id='portfolio'>
+      <LazyLoad height={200} offset={150}>
+        <Grid
+          container
+          direction='column'
+          className={classes.showCaseContainerMargin}>
+          <Grid item style={{ marginBottom: '2rem' }}>
+            <Typography variant='h3'>Portfolio</Typography>
+          </Grid>
+          {/* portoflio container */}
+          <Grid item container justify='center' alignItems='center'>
+            {/* portfolio itself */}
+            {projects.map((project) => (
+              <ShowcaseCard key={project.title} project={project} />
+            ))}
+          </Grid>
         </Grid>
-        {/* portoflio container */}
-        <Grid item container justify='center' alignItems='center'>
-          {/* portfolio itself */}
-          {projects.map((project) => (
-            <ShowcaseCard key={project.title} project={project} />
-          ))}
-        </Grid>
-      </Grid>
-    </LazyLoad>
+      </LazyLoad>
+    </div>
   );
 };
 
