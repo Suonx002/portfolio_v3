@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import LazyLoad from 'react-lazyload';
 
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
@@ -101,95 +102,97 @@ const ShowcaseCard = ({ project }) => {
           </CardActions>
         </Card>
       </Grid>
-      <Grid item>
-        <Dialog
-          open={openDialog}
-          TransitionComponent={Transition}
-          keepMounted
-          onClose={handleDialogClose}
-          aria-labelledby={`dialog-slide-${title}`}
-          aria-describedby={`dialog-slide-${description}`}
-          className={classes.dialogContainer}>
-          <DialogTitle
-            id={`dialog-slide-${title}`}
-            className={classes.dialogTitle}>
-            {title}
-          </DialogTitle>
-          <Divider />
-          <DialogContent>
-            <img
-              src={gifLink.length > 1 ? gifLink : imageLink}
-              alt={title}
-              className={classes.dialogImageContainer}
-            />
-            <DialogContentText id={`dialog-slide-${description}`}>
-              {project.description}
-            </DialogContentText>
-            <div className={classes.stack}>
-              <Typography className={classes.stackTitle}>
-                Tech Stacks
-              </Typography>
-              <ul className={classes.techList}>
-                {techStacks.map((tech) => (
-                  <li className={classes.techItem} key={uuidv4()}>
-                    <Typography variant='body1'>
-                      {tech[0].toUpperCase() + tech.slice(1)}
-                    </Typography>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </DialogContent>
-          <Divider />
-          <DialogActions className={classes.dialogActions}>
-            <Button
-              role='button'
-              aria-label='Live Demo'
-              style={{ marginRight: matchesXS ? '0' : '0.5rem' }}
-              className={classes.dialogButton}
-              size={matchesXS ? undefined : 'large'}
-              onClick={handleDialogClose}
-              href={liveDemo}
-              rel='noopener noreferrer'
-              target='_blank'
-              color='primary'
-              variant='outlined'>
-              Live Demo
-            </Button>
-            {videoDemo && videoDemo.length > 1 && (
+      <LazyLoad height={200} offset={matchesXS ? 75 : 150}>
+        <Grid item>
+          <Dialog
+            open={openDialog}
+            TransitionComponent={Transition}
+            keepMounted
+            onClose={handleDialogClose}
+            aria-labelledby={`dialog-slide-${title}`}
+            aria-describedby={`dialog-slide-${description}`}
+            className={classes.dialogContainer}>
+            <DialogTitle
+              id={`dialog-slide-${title}`}
+              className={classes.dialogTitle}>
+              {title}
+            </DialogTitle>
+            <Divider />
+            <DialogContent>
+              <img
+                src={gifLink.length > 1 ? gifLink : imageLink}
+                alt={title}
+                className={classes.dialogImageContainer}
+              />
+              <DialogContentText id={`dialog-slide-${description}`}>
+                {project.description}
+              </DialogContentText>
+              <div className={classes.stack}>
+                <Typography className={classes.stackTitle}>
+                  Tech Stacks
+                </Typography>
+                <ul className={classes.techList}>
+                  {techStacks.map((tech) => (
+                    <li className={classes.techItem} key={uuidv4()}>
+                      <Typography variant='body1'>
+                        {tech[0].toUpperCase() + tech.slice(1)}
+                      </Typography>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </DialogContent>
+            <Divider />
+            <DialogActions className={classes.dialogActions}>
               <Button
                 role='button'
-                aria-label='Video Demo'
+                aria-label='Live Demo'
                 style={{ marginRight: matchesXS ? '0' : '0.5rem' }}
                 className={classes.dialogButton}
                 size={matchesXS ? undefined : 'large'}
-                href={videoDemo}
-                rel='noopener noreferrer'
-                target='_blank'
                 onClick={handleDialogClose}
-                color='primary'
-                variant='outlined'>
-                Video Demo
-              </Button>
-            )}
-            {sourceCode && sourceCode.length > 1 && (
-              <Button
-                role='button'
-                aria-label='Source Code'
-                className={classes.dialogButton}
-                size={matchesXS ? undefined : 'large'}
-                onClick={handleDialogClose}
-                href={sourceCode}
+                href={liveDemo}
                 rel='noopener noreferrer'
                 target='_blank'
                 color='primary'
                 variant='outlined'>
-                Source Code
+                Live Demo
               </Button>
-            )}
-          </DialogActions>
-        </Dialog>
-      </Grid>
+              {videoDemo && videoDemo.length > 1 && (
+                <Button
+                  role='button'
+                  aria-label='Video Demo'
+                  style={{ marginRight: matchesXS ? '0' : '0.5rem' }}
+                  className={classes.dialogButton}
+                  size={matchesXS ? undefined : 'large'}
+                  href={videoDemo}
+                  rel='noopener noreferrer'
+                  target='_blank'
+                  onClick={handleDialogClose}
+                  color='primary'
+                  variant='outlined'>
+                  Video Demo
+                </Button>
+              )}
+              {sourceCode && sourceCode.length > 1 && (
+                <Button
+                  role='button'
+                  aria-label='Source Code'
+                  className={classes.dialogButton}
+                  size={matchesXS ? undefined : 'large'}
+                  onClick={handleDialogClose}
+                  href={sourceCode}
+                  rel='noopener noreferrer'
+                  target='_blank'
+                  color='primary'
+                  variant='outlined'>
+                  Source Code
+                </Button>
+              )}
+            </DialogActions>
+          </Dialog>
+        </Grid>
+      </LazyLoad>
     </Grid>
   );
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -68,23 +67,25 @@ const Showcase = () => {
 
   return (
     <div id='portfolio'>
-      <LazyLoad height={200} offset={matchesXS ? 75 : 150}>
-        <Grid
-          container
-          direction='column'
-          className={classes.showCaseContainerMargin}>
-          <Grid item style={{ marginBottom: '2rem' }}>
-            <Typography variant='h3'>Portfolio</Typography>
-          </Grid>
-          {/* portoflio container */}
-          <Grid item container justify='center' alignItems='center'>
-            {/* portfolio itself */}
-            {projects.map((project) => (
-              <ShowcaseCard key={project.title} project={project} />
-            ))}
-          </Grid>
+      <Grid
+        container
+        direction='column'
+        className={classes.showCaseContainerMargin}>
+        <Grid item style={{ marginBottom: '2rem' }}>
+          <Typography variant='h3'>Portfolio</Typography>
         </Grid>
-      </LazyLoad>
+        {/* portoflio container */}
+        <Grid item container justify='center' alignItems='center'>
+          {/* portfolio itself */}
+          {projects.map((project) => (
+            <ShowcaseCard
+              key={project.title}
+              project={project}
+              style={{ padding: '0.5rem' }}
+            />
+          ))}
+        </Grid>
+      </Grid>
     </div>
   );
 };
