@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -12,11 +13,11 @@ import Showcase from './components/Showcase';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   bodyContainer: {
     backgroundColor: theme.palette.primary.main,
-    color: theme.palette.common.white
-  }
+    color: theme.palette.common.white,
+  },
 }));
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
   const [value, setValue] = useState(0);
 
   useEffect(() => {
+    ReactGA.initialize('UA-163583926-1');
+    ReactGA.pageview('/');
+
     // window.location.reload();
   }, []);
 
