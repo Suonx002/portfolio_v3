@@ -27,7 +27,7 @@ const Homepage = () => {
           exit: matchesSM ? 0 : 1000,
         }}>
         <Grid container justify='space-between'>
-          <Grid item container md={5} direction='column'>
+          <Grid item container md={6} direction='column'>
             <Grid
               item
               // style={{ maxWidth: '100%' }}

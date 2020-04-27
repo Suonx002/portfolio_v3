@@ -8,15 +8,27 @@ export default makeStyles((theme) => ({
     },
   },
   cardContainer: {
-    maxWidth: 600,
+    // maxWidth: 600,
+    overflow: 'hidden',
+
     color: theme.palette.primary.main,
+    [theme.breakpoints.down('md')]: {
+      margin: '0 auto 1rem',
+    },
+
     [theme.breakpoints.down('sm')]: {
+      width: '80%',
+    },
+    [theme.breakpoints.down('xs')]: {
       width: '100%',
     },
   },
   mediaContainer: {
-    height: 350,
+    height: 300,
     // objectFit: 'contained',
+    [theme.breakpoints.down('sm')]: {
+      height: 350,
+    },
     [theme.breakpoints.down('xs')]: {
       height: 300,
     },

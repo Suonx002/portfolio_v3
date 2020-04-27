@@ -97,7 +97,7 @@ export default createMuiTheme({
     values: {
       xs: 0,
       sm: 650,
-      md: 1000,
+      md: 980,
       lg: 1280,
       xl: 1920,
     },
