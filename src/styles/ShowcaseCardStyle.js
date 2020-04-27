@@ -30,7 +30,7 @@ export default makeStyles((theme) => ({
       height: 350,
     },
     [theme.breakpoints.down('xs')]: {
-      height: 300,
+      height: 250,
     },
   },
   dialogContainer: {

@@ -53,7 +53,11 @@ const Homepage = () => {
               </Button>
             </Grid>
           </Grid>
-          <Grid item className={classes.webDeveloperContainer} md={6}>
+          <Grid
+            item
+            className={classes.webDeveloperContainer}
+            md={6}
+            style={{ marginTop: matchesSM && '2rem' }}>
             <img
               src={webDeveloperIcon}
               alt='web developer'
