@@ -26,7 +26,7 @@ const Homepage = () => {
           enter: matchesSM ? 0 : 1000,
           exit: matchesSM ? 0 : 1000,
         }}>
-        <Grid container justify='center'>
+        <Grid container justify='space-between'>
           <Grid item container md={5} direction='column'>
             <Grid
               item
@@ -53,7 +53,7 @@ const Homepage = () => {
               </Button>
             </Grid>
           </Grid>
-          <Grid item className={classes.webDeveloperContainer} md={7}>
+          <Grid item className={classes.webDeveloperContainer} md={6}>
             <img
               src={webDeveloperIcon}
               alt='web developer'

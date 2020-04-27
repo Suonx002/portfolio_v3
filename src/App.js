@@ -46,7 +46,7 @@ function App() {
       </Helmet>
       <Navbar value={value} setValue={setValue} />
       <Container
-        maxWidth='xl'
+        maxWidth='lg'
         style={{ padding: matchesXS ? '1rem' : '0 2rem' }}>
         <Homepage />
         <AboutMe />
