@@ -3,11 +3,14 @@ import LazyLoad from 'react-lazyload';
 
 // import Slide from '@material-ui/core/Slide';
 import Paper from '@material-ui/core/Paper';
-import { withStyles, useTheme } from '@material-ui/core/styles';
+import {
+  withStyles,
+  // ,useTheme
+} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Tooltip from '@material-ui/core/Tooltip';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+// import useMediaQuery from '@material-ui/core/useMediaQuery';
 import sprite from '../assets/img/sprite.svg';
 
 import useStyles from '../styles/AboutMeStyle';
@@ -58,9 +61,9 @@ const icons = [
 
 const AboutMe = () => {
   const classes = useStyles();
-  const theme = useTheme();
+  // const theme = useTheme();
 
-  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
+  // const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <Grid

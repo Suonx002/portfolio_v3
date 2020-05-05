@@ -44,7 +44,7 @@ const Homepage = () => {
                 rel='noopener noreferrer'
                 role='button'
                 aria-label='Email'
-                href='mailto:admin@vuthysuon.com'
+                href='mailto:hello@vuthysuon.com'
                 variant='outlined'
                 color='secondary'
                 size={matchesXS ? 'medium' : 'large'}
