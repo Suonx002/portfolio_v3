@@ -77,7 +77,7 @@ const Navbar = (props) => {
         <Tab
           label='Resume'
           component={'a'}
-          href='https://res.cloudinary.com/dk9fdcnnp/image/upload/v1585977328/Resume/tnyunzl9jhxrr9wkmhsi.pdf'
+          href='https://res.cloudinary.com/dk9fdcnnp/image/upload/v1588717758/Resume/Vuthy_Suon.pdf'
           rel='noopener noreferrer'
           target='_blank'
           className={classes.resumeButton}
@@ -147,7 +147,7 @@ const Navbar = (props) => {
             divider
             className={classes.resumeItem}
             component='a'
-            href='https://res.cloudinary.com/dk9fdcnnp/image/upload/v1585977328/Resume/tnyunzl9jhxrr9wkmhsi.pdf'
+            href='https://res.cloudinary.com/dk9fdcnnp/image/upload/v1588717758/Resume/Vuthy_Suon.pdf'
             rel='noopener noreferrer'
             target='_blank'>
             <ListItemText
