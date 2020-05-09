@@ -21,6 +21,7 @@ import logo from '../assets/img/logo_white.png';
 const Navbar = (props) => {
   const classes = useStyles();
   const theme = useTheme();
+
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
   const { value, setValue } = props;
