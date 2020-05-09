@@ -2,8 +2,8 @@ import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { useTheme } from '@material-ui/core/styles';
+// import useMediaQuery from '@material-ui/core/useMediaQuery';
+// import { useTheme } from '@material-ui/core/styles';
 
 import useStyles from '../styles/ShowcaseStyle';
 import ShowcaseCard from './ShowcaseCard';
@@ -36,7 +36,7 @@ const projects = [
     imageLink:
       'https://res.cloudinary.com/dlzglgofe/image/upload/c_scale,q_60,w_600/v1589058820/resume/portfolio_2.png',
     gifLink:
-      'https://camo.githubusercontent.com/0ed64b605dfebd77030d6f6004d7a2ae0bc44217/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6858506b324e586f6444724f63396b454e792f67697068792e676966',
+      'https://res.cloudinary.com/dlzglgofe/image/upload/v1589062359/resume/video.gif',
     liveDemo: 'https://webresources.herokuapp.com/',
     videoDemo: 'https://www.youtube.com/watch?v=pSWlTuGREMw&feature=youtu.be',
     sourceCode: 'https://github.com/Suonx002/WebResources',
@@ -68,8 +68,8 @@ const projects = [
 
 const Showcase = () => {
   const classes = useStyles();
-  const theme = useTheme();
-  const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
+  // const theme = useTheme();
+  // const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
 
   return (
     <div id='portfolio'>
