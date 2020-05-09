@@ -58,7 +58,7 @@ const ShowcaseCard = ({ project }) => {
       lg={4}
       md={6}>
       <Grid item className={classes.gridContainerItem}>
-        <LazyLoad height={200}>
+        <LazyLoad height={200} offset={matchesXS ? 75 : 150}>
           <Card className={classes.cardContainer}>
             <CardActionArea>
               <CardMedia
@@ -112,9 +112,8 @@ const ShowcaseCard = ({ project }) => {
         </LazyLoad>
       </Grid>
 
-      {/* <LazyLoad height={200} offset={matchesXS ? 75 : 150}> */}
-      <Grid item>
-        <LazyLoad height={200}>
+      <LazyLoad height={200} offset={matchesXS ? 75 : 150}>
+        <Grid item>
           <Dialog
             open={openDialog}
             TransitionComponent={Transition}
@@ -202,9 +201,8 @@ const ShowcaseCard = ({ project }) => {
               )}
             </DialogActions>
           </Dialog>
-        </LazyLoad>
-      </Grid>
-      {/* </LazyLoad> */}
+        </Grid>
+      </LazyLoad>
     </Grid>
   );
 };
