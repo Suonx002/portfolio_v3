@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import LazyLoad from 'react-lazyload';
 
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
@@ -60,17 +59,15 @@ const ShowcaseCard = ({ project }) => {
       <Grid item className={classes.gridContainerItem}>
         <Card className={classes.cardContainer}>
           <CardActionArea>
-            <LazyLoad height={200} offset={matchesXS ? 75 : 150}>
-              <CardMedia
-                component={'a'}
-                href={liveDemo}
-                rel='noopener noreferrer'
-                target='_blank'
-                className={classes.mediaContainer}
-                image={imageLink}
-                title={title}
-              />
-            </LazyLoad>
+            <CardMedia
+              component={'a'}
+              href={liveDemo}
+              rel='noopener noreferrer'
+              target='_blank'
+              className={classes.mediaContainer}
+              image={imageLink}
+              title={title}
+            />
 
             <CardContent>
               <Typography gutterBottom variant='h6'>
@@ -129,13 +126,11 @@ const ShowcaseCard = ({ project }) => {
           </DialogTitle>
           <Divider />
           <DialogContent>
-            <LazyLoad height={200} offset={matchesXS ? 75 : 150}>
-              <img
-                src={gifLink.length > 1 ? gifLink : imageLink}
-                alt={title}
-                className={classes.dialogImageContainer}
-              />
-            </LazyLoad>
+            <img
+              src={gifLink.length > 1 ? gifLink : imageLink}
+              alt={title}
+              className={classes.dialogImageContainer}
+            />
 
             <DialogContentText id={`dialog-slide-${description}`}>
               {project.description}

@@ -1,9 +1,10 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-// import useMediaQuery from '@material-ui/core/useMediaQuery';
-// import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
 
 import useStyles from '../styles/ShowcaseStyle';
 import ShowcaseCard from './ShowcaseCard';
@@ -68,8 +69,8 @@ const projects = [
 
 const Showcase = () => {
   const classes = useStyles();
-  // const theme = useTheme();
-  // const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
+  const theme = useTheme();
+  const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
 
   return (
     <div id='portfolio'>
@@ -82,16 +83,18 @@ const Showcase = () => {
         </Grid>
         {/* portoflio container */}
 
-        <Grid item container justify='center' alignItems='center'>
-          {/* portfolio itself */}
-          {projects.map((project) => (
-            <ShowcaseCard
-              key={project.title}
-              project={project}
-              style={{ padding: '0.5rem' }}
-            />
-          ))}
-        </Grid>
+        <LazyLoad height={200} offset={matchesXS ? 75 : 150}>
+          <Grid item container justify='center' alignItems='center'>
+            {/* portfolio itself */}
+            {projects.map((project) => (
+              <ShowcaseCard
+                key={project.title}
+                project={project}
+                style={{ padding: '0.5rem' }}
+              />
+            ))}
+          </Grid>
+        </LazyLoad>
       </Grid>
     </div>
   );
