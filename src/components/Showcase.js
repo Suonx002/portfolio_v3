@@ -2,8 +2,8 @@ import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-// import useMediaQuery from '@material-ui/core/useMediaQuery';
-// import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
 
 import useStyles from '../styles/ShowcaseStyle';
 import ShowcaseCard from './ShowcaseCard';
@@ -68,8 +68,8 @@ const projects = [
 
 const Showcase = () => {
   const classes = useStyles();
-  // const theme = useTheme();
-  // const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
+  const theme = useTheme();
+  const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
 
   return (
     <div id='portfolio'>
@@ -81,6 +81,7 @@ const Showcase = () => {
           <Typography variant='h3'>Portfolio</Typography>
         </Grid>
         {/* portoflio container */}
+
         <Grid item container justify='center' alignItems='center'>
           {/* portfolio itself */}
           {projects.map((project) => (

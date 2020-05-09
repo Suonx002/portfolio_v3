@@ -58,9 +58,9 @@ const ShowcaseCard = ({ project }) => {
       lg={4}
       md={6}>
       <Grid item className={classes.gridContainerItem}>
-        <LazyLoad height={200} offset={matchesXS ? 75 : 150}>
-          <Card className={classes.cardContainer}>
-            <CardActionArea>
+        <Card className={classes.cardContainer}>
+          <CardActionArea>
+            <LazyLoad height={200} offset={matchesXS ? 75 : 150}>
               <CardMedia
                 component={'a'}
                 href={liveDemo}
@@ -70,139 +70,141 @@ const ShowcaseCard = ({ project }) => {
                 image={imageLink}
                 title={title}
               />
-              <CardContent>
-                <Typography gutterBottom variant='h6'>
-                  {title}
-                </Typography>
-                <Typography
-                  variant='body1'
-                  color='textSecondary'
-                  component='p'
-                  style={{
-                    height: matchesSM ? 'auto' : '100px',
-                  }}>
-                  {description}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <Divider />
-            <CardActions>
-              <Button
-                role='button'
-                aria-label='Live Demo'
-                size={matchesXS ? 'medium' : 'large'}
-                color='primary'
-                href={liveDemo}
-                rel='noopener noreferrer'
-                target='_blank'
-                variant='contained'>
-                Live Demo
-              </Button>
-              <Button
-                role='button'
-                aria-label='View More'
-                size={matchesXS ? 'medium' : 'large'}
-                color='primary'
-                variant='outlined'
-                onClick={handleDialogOpen}>
-                View More
-              </Button>
-            </CardActions>
-          </Card>
-        </LazyLoad>
+            </LazyLoad>
+
+            <CardContent>
+              <Typography gutterBottom variant='h6'>
+                {title}
+              </Typography>
+              <Typography
+                variant='body1'
+                color='textSecondary'
+                component='p'
+                style={{
+                  height: matchesSM ? 'auto' : '100px',
+                }}>
+                {description}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <Divider />
+          <CardActions>
+            <Button
+              role='button'
+              aria-label='Live Demo'
+              size={matchesXS ? 'medium' : 'large'}
+              color='primary'
+              href={liveDemo}
+              rel='noopener noreferrer'
+              target='_blank'
+              variant='contained'>
+              Live Demo
+            </Button>
+            <Button
+              role='button'
+              aria-label='View More'
+              size={matchesXS ? 'medium' : 'large'}
+              color='primary'
+              variant='outlined'
+              onClick={handleDialogOpen}>
+              View More
+            </Button>
+          </CardActions>
+        </Card>
       </Grid>
 
-      <LazyLoad height={200} offset={matchesXS ? 75 : 150}>
-        <Grid item>
-          <Dialog
-            open={openDialog}
-            TransitionComponent={Transition}
-            keepMounted
-            onClose={handleDialogClose}
-            aria-labelledby={`dialog-slide-${title}`}
-            aria-describedby={`dialog-slide-${description}`}
-            className={classes.dialogContainer}>
-            <DialogTitle
-              id={`dialog-slide-${title}`}
-              className={classes.dialogTitle}>
-              {title}
-            </DialogTitle>
-            <Divider />
-            <DialogContent>
+      <Grid item>
+        <Dialog
+          open={openDialog}
+          TransitionComponent={Transition}
+          keepMounted
+          onClose={handleDialogClose}
+          aria-labelledby={`dialog-slide-${title}`}
+          aria-describedby={`dialog-slide-${description}`}
+          className={classes.dialogContainer}>
+          <DialogTitle
+            id={`dialog-slide-${title}`}
+            className={classes.dialogTitle}>
+            {title}
+          </DialogTitle>
+          <Divider />
+          <DialogContent>
+            <LazyLoad height={200} offset={matchesXS ? 75 : 150}>
               <img
                 src={gifLink.length > 1 ? gifLink : imageLink}
                 alt={title}
                 className={classes.dialogImageContainer}
               />
-              <DialogContentText id={`dialog-slide-${description}`}>
-                {project.description}
-              </DialogContentText>
-              <div className={classes.stack}>
-                <Typography className={classes.stackTitle}>
-                  Tech Stacks
-                </Typography>
-                <ul className={classes.techList}>
-                  {techStacks.map((tech) => (
-                    <li className={classes.techItem} key={uuidv4()}>
-                      <Typography variant='body1'>
-                        {tech[0].toUpperCase() + tech.slice(1)}
-                      </Typography>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </DialogContent>
-            <Divider />
-            <DialogActions className={classes.dialogActions}>
+            </LazyLoad>
+
+            <DialogContentText id={`dialog-slide-${description}`}>
+              {project.description}
+            </DialogContentText>
+            <div className={classes.stack}>
+              <Typography className={classes.stackTitle}>
+                Tech Stacks
+              </Typography>
+              <ul className={classes.techList}>
+                {techStacks.map((tech) => (
+                  <li className={classes.techItem} key={uuidv4()}>
+                    <Typography variant='body1'>
+                      {tech[0].toUpperCase() + tech.slice(1)}
+                    </Typography>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </DialogContent>
+          <Divider />
+          <DialogActions className={classes.dialogActions}>
+            <Button
+              role='button'
+              aria-label='Live Demo'
+              style={{ marginRight: matchesXS ? '0' : '0.5rem' }}
+              className={classes.dialogButton}
+              size={matchesXS ? undefined : 'large'}
+              onClick={handleDialogClose}
+              href={liveDemo}
+              rel='noopener noreferrer'
+              target='_blank'
+              color='primary'
+              variant='outlined'>
+              Live Demo
+            </Button>
+            {videoDemo && videoDemo.length > 1 && (
               <Button
                 role='button'
-                aria-label='Live Demo'
+                aria-label='Video Demo'
                 style={{ marginRight: matchesXS ? '0' : '0.5rem' }}
                 className={classes.dialogButton}
                 size={matchesXS ? undefined : 'large'}
+                href={videoDemo}
+                rel='noopener noreferrer'
+                target='_blank'
                 onClick={handleDialogClose}
-                href={liveDemo}
+                color='primary'
+                variant='outlined'>
+                Video Demo
+              </Button>
+            )}
+            {sourceCode && sourceCode.length > 1 && (
+              <Button
+                role='button'
+                aria-label='Source Code'
+                className={classes.dialogButton}
+                size={matchesXS ? undefined : 'large'}
+                onClick={handleDialogClose}
+                href={sourceCode}
                 rel='noopener noreferrer'
                 target='_blank'
                 color='primary'
                 variant='outlined'>
-                Live Demo
+                Source Code
               </Button>
-              {videoDemo && videoDemo.length > 1 && (
-                <Button
-                  role='button'
-                  aria-label='Video Demo'
-                  style={{ marginRight: matchesXS ? '0' : '0.5rem' }}
-                  className={classes.dialogButton}
-                  size={matchesXS ? undefined : 'large'}
-                  href={videoDemo}
-                  rel='noopener noreferrer'
-                  target='_blank'
-                  onClick={handleDialogClose}
-                  color='primary'
-                  variant='outlined'>
-                  Video Demo
-                </Button>
-              )}
-              {sourceCode && sourceCode.length > 1 && (
-                <Button
-                  role='button'
-                  aria-label='Source Code'
-                  className={classes.dialogButton}
-                  size={matchesXS ? undefined : 'large'}
-                  onClick={handleDialogClose}
-                  href={sourceCode}
-                  rel='noopener noreferrer'
-                  target='_blank'
-                  color='primary'
-                  variant='outlined'>
-                  Source Code
-                </Button>
-              )}
-            </DialogActions>
-          </Dialog>
-        </Grid>
-      </LazyLoad>
+            )}
+          </DialogActions>
+        </Dialog>
+      </Grid>
     </Grid>
   );
 };
