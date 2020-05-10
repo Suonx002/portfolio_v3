@@ -27,8 +27,8 @@ const Contact = (props) => {
         </Grid>
         <Grid item className={classes.contactItem} style={{ maxWidth: 450 }}>
           <Typography variant='body1' className={classes.contactInfo}>
-            I am currently open to new challenges and opportunities! You can
-            reach me through live chat, email, or my social network.
+            I am currently looking for new opportunities! You can contact me
+            through live chat, email, or social platforms.
           </Typography>
         </Grid>
         <Grid item className={classes.contactItem}>

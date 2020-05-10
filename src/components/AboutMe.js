@@ -85,11 +85,11 @@ const AboutMe = () => {
           className={classes.aboutMeInfo}
           style={{ marginBottom: '2rem' }}>
           <Typography variant='body1' className={classes.infoText}>
-            A web developer passionate about building professional and modern
-            web applications. Background inComputer Science and Information
-            Technology Infrastructure. Experience in Material UI,
-            Javascript,React, Redux, Node, Express and MongoDB. I am
-            self-driven, an adaptable learner, and am constantlystriving to
+            I'm a web developer with a passion about building professional and
+            modern web applications. Background in Computer Science and
+            Information Technology Infrastructure. Experience in Material-UI,
+            Javascript, React, Redux, Node, Express, and many more. I am
+            self-driven, an adaptable learner, and am constantly striving to
             challenging myself with complex projects.
           </Typography>
         </Grid>
