@@ -17,7 +17,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 import useStyles from '../styles/NavbarStyle';
 import logo from '../assets/img/logo_white.png';
-import Resume from '../assets/vuthy_suon_resume.pdf';
 
 const Navbar = (props) => {
   const classes = useStyles();
@@ -80,7 +79,7 @@ const Navbar = (props) => {
           label='Resume'
           component={'a'}
           // href='https://res.cloudinary.com/dk9fdcnnp/image/upload/v1588722412/Resume/Vuthy_Suon.pdf'
-          href={Resume}
+          href={`${process.env.PUBLIC_URL}/resume.pdf`}
           rel='noopener noreferrer'
           target='_blank'
           className={classes.resumeButton}
@@ -151,7 +150,7 @@ const Navbar = (props) => {
             className={classes.resumeItem}
             component='a'
             // href='https://res.cloudinary.com/dk9fdcnnp/image/upload/v1588722412/Resume/Vuthy_Suon.pdf'
-            href={Resume}
+            href={`${process.env.PUBLIC_URL}/resume.pdf`}
             rel='noopener noreferrer'
             target='_blank'>
             <ListItemText
