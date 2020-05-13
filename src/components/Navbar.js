@@ -152,7 +152,8 @@ const Navbar = (props) => {
             // href='https://res.cloudinary.com/dk9fdcnnp/image/upload/v1588722412/Resume/Vuthy_Suon.pdf'
             href={`${process.env.PUBLIC_URL}/resume.pdf`}
             rel='noopener noreferrer'
-            target='_blank'>
+            target='_blank'
+            onClick={() => setOpenDrawer(false)}>
             <ListItemText
               primary={'Resume'}
 
