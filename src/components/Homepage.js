@@ -7,6 +7,8 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Grow from '@material-ui/core/Grow';
 import Button from '@material-ui/core/Button';
 
+import Fade from '@material-ui/core/Fade';
+
 import useStyles from '../styles/HomepageStyle';
 import webDeveloperIcon from '../assets/img/web_developer.svg';
 
@@ -18,15 +20,24 @@ const Homepage = () => {
   const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
   return (
     <div className={classes.homepageContainer}>
-      <Grow
+      {/* <Grow
         in
         mountOnEnter
         unmountOnExit
         timeout={{
           enter: matchesSM ? 0 : 1000,
           exit: matchesSM ? 0 : 1000,
-        }}>
-        <Grid container justify='space-between'>
+        }}> */}
+
+      <Grid container justify='space-between'>
+        <Fade
+          in
+          mountOnEnter
+          unmountOnExit
+          timeout={{
+            enter: 1000,
+            exit: 1000,
+          }}>
           <Grid item container md={6} direction='column'>
             <Grid
               item
@@ -53,6 +64,15 @@ const Homepage = () => {
               </Button>
             </Grid>
           </Grid>
+        </Fade>
+        <Fade
+          in
+          mountOnEnter
+          unmountOnExit
+          timeout={{
+            enter: 2500,
+            exit: 1000,
+          }}>
           <Grid
             item
             className={classes.webDeveloperContainer}
@@ -64,8 +84,9 @@ const Homepage = () => {
               className={classes.webDeveloperIcon}
             />
           </Grid>
-        </Grid>
-      </Grow>
+        </Fade>
+      </Grid>
+      {/* </Grow> */}
     </div>
   );
 };
