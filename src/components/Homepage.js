@@ -56,6 +56,7 @@ const Homepage = () => {
                 role='button'
                 aria-label='Email'
                 href='mailto:hello@vuthysuon.com'
+                target='_blank'
                 variant='outlined'
                 color='secondary'
                 size={matchesXS ? 'medium' : 'large'}

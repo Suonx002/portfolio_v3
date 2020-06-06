@@ -37,6 +37,7 @@ const Contact = (props) => {
             aria-label='Email'
             rel='noopener noreferrer'
             href='mailto:hello@vuthysuon.com'
+            target='_blank'
             variant='outlined'
             color='secondary'
             size='large'
