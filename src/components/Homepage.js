@@ -4,10 +4,10 @@ import { useTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import Grow from '@material-ui/core/Grow';
+// import Grow from '@material-ui/core/Grow';
 import Button from '@material-ui/core/Button';
 
-import Fade from '@material-ui/core/Fade';
+// import Fade from '@material-ui/core/Fade';
 
 import useStyles from '../styles/HomepageStyle';
 import webDeveloperIcon from '../assets/img/web_developer.svg';
