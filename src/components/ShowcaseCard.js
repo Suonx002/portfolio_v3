@@ -27,6 +27,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 const ShowcaseCard = ({ project }) => {
   const {
+    delay,
     title,
     description,
     imageLink,
@@ -56,7 +57,13 @@ const ShowcaseCard = ({ project }) => {
       justify='center'
       lg={4}
       md={6}>
-      <Grid item className={classes.gridContainerItem}>
+      <Grid
+        item
+        className={classes.gridContainerItem}
+        data-aos='fade'
+        data-aos-offset='400'
+        data-aos-easing='ease-in-quart'
+        data-aos-duration={delay}>
         <Card className={classes.cardContainer}>
           <CardActionArea>
             <CardMedia

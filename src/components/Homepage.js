@@ -30,62 +30,57 @@ const Homepage = () => {
         }}> */}
 
       <Grid container justify='space-between'>
-        <Fade
-          in
-          mountOnEnter
-          unmountOnExit
-          timeout={{
-            enter: 1000,
-            exit: 1000,
-          }}>
-          <Grid item container md={6} direction='column'>
-            <Grid
-              item
-              // style={{ maxWidth: '100%' }}
-            >
-              <Typography variant='h2'>I'm Vuthy Suon,</Typography>
-            </Grid>
-            <Grid item className={classes.gridItemMarginBottom}>
-              <Typography variant='h3' className={classes.infoText}>
-                a web developer based in Minneapolis, MN.
-              </Typography>
-            </Grid>
-            <Grid item className={classes.gridItemMarginBottom}>
-              <Button
-                rel='noopener noreferrer'
-                role='button'
-                aria-label='Email'
-                href='mailto:hello@vuthysuon.com'
-                target='_blank'
-                variant='outlined'
-                color='secondary'
-                size={matchesXS ? 'medium' : 'large'}
-                className={classes.getInTouch}>
-                Get In Touch
-              </Button>
-            </Grid>
-          </Grid>
-        </Fade>
-        <Fade
-          in
-          mountOnEnter
-          unmountOnExit
-          timeout={{
-            enter: 2500,
-            exit: 1000,
-          }}>
+        <Grid
+          item
+          container
+          md={6}
+          direction='column'
+          data-aos='fade'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-quart'
+          data-aos-duration='400'>
           <Grid
             item
-            className={classes.webDeveloperContainer}
-            md={6}
-            style={{ marginTop: matchesSM && '2rem' }}>
-            <img
-              src={webDeveloperIcon}
-              alt='web developer'
-              className={classes.webDeveloperIcon}
-            />
+            // style={{ maxWidth: '100%' }}
+          >
+            <Typography variant='h2'>I'm Vuthy Suon,</Typography>
           </Grid>
-        </Fade>
+          <Grid item className={classes.gridItemMarginBottom}>
+            <Typography variant='h3' className={classes.infoText}>
+              a web developer based in Minneapolis, MN.
+            </Typography>
+          </Grid>
+          <Grid item className={classes.gridItemMarginBottom}>
+            <Button
+              rel='noopener noreferrer'
+              role='button'
+              aria-label='Email'
+              href='mailto:hello@vuthysuon.com'
+              target='_blank'
+              variant='outlined'
+              color='secondary'
+              size={matchesXS ? 'medium' : 'large'}
+              className={classes.getInTouch}>
+              Get In Touch
+            </Button>
+          </Grid>
+        </Grid>
+
+        <Grid
+          item
+          className={classes.webDeveloperContainer}
+          md={6}
+          style={{ marginTop: matchesSM && '2rem' }}
+          data-aos='fade'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-quart'
+          data-aos-duration='800'>
+          <img
+            src={webDeveloperIcon}
+            alt='web developer'
+            className={classes.webDeveloperIcon}
+          />
+        </Grid>
       </Grid>
       {/* </Grow> */}
     </div>

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -31,6 +33,8 @@ function App() {
   useEffect(() => {
     ReactGA.initialize('UA-163583926-1');
     ReactGA.pageview('/');
+
+    AOS.init();
 
     // window.location.reload();
   }, []);

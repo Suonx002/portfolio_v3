@@ -13,11 +13,13 @@ import useStyles from '../styles/FooterStyle.js';
 
 const icons = [
   {
+    delay: '800',
     name: 'Github',
     link: 'https://github.com/Suonx002',
     icon: GitHubIcon,
   },
   {
+    delay: '1000',
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/suonx002/',
     icon: LinkedInIcon,
@@ -43,7 +45,14 @@ const Footer = () => {
       alignItems='center'>
       <Grid item container justify='center' alignItems='center'>
         {icons.map((item, index) => (
-          <Grid item key={`${item}-${index}`} className={classes.itemContainer}>
+          <Grid
+            item
+            key={`${item}-${index}`}
+            className={classes.itemContainer}
+            data-aos='fade'
+            data-aos-offset='0'
+            data-aos-easing='ease-in-quart'
+            data-aos-duration={item.delay}>
             <LightTooltip title={item.name}>
               <IconButton
                 className={classes.buttonContainer}
@@ -58,7 +67,13 @@ const Footer = () => {
       </Grid>
 
       <Grid item>
-        <Typography variant='h6' className={classes.builtBy}>
+        <Typography
+          variant='h6'
+          className={classes.builtBy}
+          data-aos='fade'
+          data-aos-offset='0'
+          data-aos-easing='ease-in-quart'
+          data-aos-duration='1200'>
           Designed and built by Vuthy Suon
         </Typography>
       </Grid>

@@ -15,6 +15,7 @@ import ShowcaseCard from './ShowcaseCard';
 
 const projects = [
   {
+    delay: '700',
     title: 'DisneySolo',
     description:
       'Disney Solo is a movie application that allows users to search for their favorite movies, watch trailers, now playing, discover trending films, etc.',
@@ -29,6 +30,7 @@ const projects = [
     techStacks: ['React', 'Redux', 'Sass'],
   },
   {
+    delay: '900',
     title: 'WebResources',
     description:
       'Web Resources is an application that allows beginner and intermediate programmers to share learning resources such as online courses and tutorials.',
@@ -52,6 +54,7 @@ const projects = [
     ],
   },
   {
+    delay: '1100',
     title: 'EntryLevel',
     description:
       'Entry Level is a career website that aggregates entry-level positions, benefiting students, career changers by optimizing the front end experience.',
@@ -78,7 +81,13 @@ const Showcase = () => {
         container
         direction='column'
         className={classes.showCaseContainerMargin}>
-        <Grid item style={{ marginBottom: '2rem' }}>
+        <Grid
+          item
+          style={{ marginBottom: '2rem' }}
+          data-aos='fade'
+          data-aos-offset='250'
+          data-aos-easing='ease-in-quart'
+          data-aos-duration='500'>
           <Typography variant='h3'>Portfolio</Typography>
         </Grid>
         {/* portoflio container */}

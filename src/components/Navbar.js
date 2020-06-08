@@ -182,7 +182,14 @@ const Navbar = (props) => {
   }, []);
   return (
     <Fragment>
-      <AppBar postion='static' color='primary' className={classes.appbar}>
+      <AppBar
+        postion='static'
+        color='primary'
+        className={classes.appbar}
+        data-aos='fade'
+        data-aos-offset='200'
+        data-aos-easing='ease-in-quart'
+        data-aos-duration='200'>
         <Toolbar>
           <IconButton
             className={classes.logoContainer}

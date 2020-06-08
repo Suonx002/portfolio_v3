@@ -22,16 +22,35 @@ const Contact = (props) => {
         justify='center'
         alignItems='center'
         className={classes.contactContainer}>
-        <Grid item className={classes.contactItem}>
+        <Grid
+          item
+          className={classes.contactItem}
+          data-aos='fade'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-quart'
+          data-aos-duration='500'>
           <Typography variant='h2'>Get In Touch</Typography>
         </Grid>
-        <Grid item className={classes.contactItem} style={{ maxWidth: 450 }}>
+        <Grid
+          item
+          className={classes.contactItem}
+          style={{ maxWidth: 450 }}
+          data-aos='fade'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-quart'
+          data-aos-duration='700'>
           <Typography variant='body1' className={classes.contactInfo}>
             I am currently looking for new opportunities! You can contact me
             through live chat, email, or social platforms.
           </Typography>
         </Grid>
-        <Grid item className={classes.contactItem}>
+        <Grid
+          item
+          className={classes.contactItem}
+          data-aos='fade'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-quart'
+          data-aos-duration='900'>
           <Button
             role='button'
             aria-label='Email'
@@ -46,7 +65,12 @@ const Contact = (props) => {
           </Button>
         </Grid>
       </Grid>
-      <div className={classes.goBackHomeContainer}>
+      <div
+        className={classes.goBackHomeContainer}
+        data-aos='fade'
+        data-aos-offset='0'
+        data-aos-easing='ease-in-quart'
+        data-aos-duration='700'>
         <IconButton
           role='button'
           aria-label='icon'
