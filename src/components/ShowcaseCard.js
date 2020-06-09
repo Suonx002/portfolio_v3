@@ -85,7 +85,7 @@ const ShowcaseCard = ({ project }) => {
                 color='textSecondary'
                 component='p'
                 style={{
-                  height: matchesSM ? 'auto' : '100px',
+                  height: matchesSM ? 'auto' : '120px',
                 }}>
                 {description}
               </Typography>
@@ -94,17 +94,19 @@ const ShowcaseCard = ({ project }) => {
           <Divider />
           <CardActions>
             <Button
+              style={{ textTransform: 'none' }}
               role='button'
               aria-label='Live Demo'
               size={matchesXS ? 'medium' : 'large'}
               color='primary'
-              href={liveDemo}
+              href={liveDemo.length === 0 ? videoDemo : liveDemo}
               rel='noopener noreferrer'
               target='_blank'
               variant='contained'>
-              Live Demo
+              {liveDemo.length === 0 ? 'Video Demo' : 'Live Demo'}
             </Button>
             <Button
+              style={{ textTransform: 'none' }}
               role='button'
               aria-label='View More'
               size={matchesXS ? 'medium' : 'large'}
@@ -159,20 +161,23 @@ const ShowcaseCard = ({ project }) => {
           </DialogContent>
           <Divider />
           <DialogActions className={classes.dialogActions}>
-            <Button
-              role='button'
-              aria-label='Live Demo'
-              style={{ marginRight: matchesXS ? '0' : '0.5rem' }}
-              className={classes.dialogButton}
-              size={matchesXS ? undefined : 'large'}
-              onClick={handleDialogClose}
-              href={liveDemo}
-              rel='noopener noreferrer'
-              target='_blank'
-              color='primary'
-              variant='outlined'>
-              Live Demo
-            </Button>
+            {liveDemo.length === 0 ? null : (
+              <Button
+                role='button'
+                aria-label='Live Demo'
+                style={{ marginRight: matchesXS ? '0' : '0.5rem' }}
+                className={classes.dialogButton}
+                size={matchesXS ? undefined : 'large'}
+                onClick={handleDialogClose}
+                href={liveDemo}
+                rel='noopener noreferrer'
+                target='_blank'
+                color='primary'
+                variant='outlined'>
+                Live Demo
+              </Button>
+            )}
+
             {videoDemo && videoDemo.length > 1 && (
               <Button
                 role='button'

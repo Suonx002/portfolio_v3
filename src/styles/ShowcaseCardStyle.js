@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
   gridContainerItem: {
-    margin: '0.5rem',
+    margin: '0 0.5rem 1rem',
     [theme.breakpoints.down('xs')]: {
       margin: '0 0 1rem 0',
     },
@@ -25,7 +25,6 @@ export default makeStyles((theme) => ({
   },
   mediaContainer: {
     height: 300,
-    // objectFit: 'contained',
     [theme.breakpoints.down('sm')]: {
       height: 350,
     },

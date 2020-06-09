@@ -87,7 +87,7 @@ const projects = [
     gifLink:
       'https://res.cloudinary.com/dlzglgofe/image/upload/v1589062359/resume/video.gif',
     liveDemo: 'https://webresources.herokuapp.com/',
-    videoDemo: 'https://www.youtube.com/watch?v=pSWlTuGREMw&feature=youtu.be',
+    videoDemo: 'https://www.youtube.com/watch?v=jFMEIAF24bE',
     sourceCode: 'https://github.com/Suonx002/WebResources',
     techStacks: [
       'React',
