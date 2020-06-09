@@ -33,37 +33,37 @@ const icons = [
   {
     name: 'CSS3',
     link: 'css3',
-    delay: '1100',
+    delay: '1000',
   },
   {
     name: 'Sass',
     link: 'sass',
-    delay: '1300',
+    delay: '1100',
   },
   {
     name: 'Material UI',
     link: 'material-ui',
-    delay: '1500',
+    delay: '1200',
   },
   {
     name: 'Javascript',
     link: 'javascript',
-    delay: '1700',
+    delay: '1300',
   },
   {
     name: 'React',
     link: 'react-native',
-    delay: '1900',
+    delay: '1400',
   },
   {
     name: 'Node',
     link: 'nodejs',
-    delay: '2100',
+    delay: '1500',
   },
   {
     name: 'MongoDB',
     link: 'mongodb',
-    delay: '2300',
+    delay: '1600',
   },
 ];
 
