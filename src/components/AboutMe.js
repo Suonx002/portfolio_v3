@@ -48,44 +48,44 @@ const icons = [
 	{
 		name: 'Chakra UI',
 		link: 'chakra',
-		delay: '1200',
+		delay: '1300',
 	},
 	{
 		name: 'Javascript',
 		link: 'javascript',
-		delay: '1300',
+		delay: '1400',
 	},
 	{
 		name: 'React',
 		link: 'react-native',
-		delay: '1400',
+		delay: '1500',
 	},
 
 	{
 		name: 'Wordpress',
 		link: 'wordpress',
-		delay: '1400',
+		delay: '1600',
 	},
 	{
 		name: 'Firebase',
 		link: 'firebase',
-		delay: '1400',
+		delay: '1700',
 	},
 	{
 		name: 'Node',
 		link: 'nodejs',
-		delay: '1500',
+		delay: '1800',
 	},
 
 	{
 		name: 'PostgresSQL',
 		link: 'postgresql',
-		delay: '1600',
+		delay: '1900',
 	},
 	{
 		name: 'MongoDB',
 		link: 'mongodb',
-		delay: '1600',
+		delay: '2000',
 	},
 ];
 
