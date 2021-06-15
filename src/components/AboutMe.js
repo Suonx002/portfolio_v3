@@ -36,18 +36,19 @@ const icons = [
 		delay: '1000',
 	},
 	{
-		name: 'Sass',
-		link: 'sass',
+		name: 'Bootstrap',
+		link: 'bootstrap',
 		delay: '1100',
-	},
-	{
-		name: 'Material UI',
-		link: 'material-ui',
-		delay: '1200',
 	},
 	{
 		name: 'Chakra UI',
 		link: 'chakra',
+
+		delay: '1200',
+	},
+	{
+		name: 'Material UI',
+		link: 'material-ui',
 		delay: '1300',
 	},
 	{
