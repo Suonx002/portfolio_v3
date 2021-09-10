@@ -14,7 +14,7 @@ import ShowcaseCard from './ShowcaseCard';
 // import portfolio_3 from '../assets/img/portfolio_3.png';
 
 const projects = [
-	// 12
+	// 15
 	{
 		delay: '500',
 		title: 'Minnesota Air',
@@ -29,7 +29,7 @@ const projects = [
 		sourceCode: '',
 		techStacks: ['Wordpress', 'Custom Built'],
 	},
-	// 11
+	// 14
 	{
 		delay: '700',
 		title: 'Pinky Swear',
@@ -44,9 +44,24 @@ const projects = [
 		sourceCode: '',
 		techStacks: ['Wordpress', 'Custom Built'],
 	},
-	// 10
+	// 13
 	{
 		delay: '900',
+		title: 'Student Angler Tournament Trail',
+		description:
+			'At SATT our goal is to grow the future of fishing and create a lasting impact for students and families.',
+		// imageLink: portfolio_1,
+		imageLink:
+			'https://res.cloudinary.com/dk9fdcnnp/image/upload/v1631242854/Resume/wsjy5ep24vwdcuhhbnl7.png',
+		gifLink: '',
+		liveDemo: 'https://www.mnsatt.org/',
+		videoDemo: '',
+		sourceCode: '',
+		techStacks: ['Wordpress', 'Toolset', 'Jotform', 'Custom Built'],
+	},
+	// 12
+	{
+		delay: '500',
 		title: 'Student Angler',
 		description:
 			'Dedicated to increasing fishing opportunities and environmental awareness for students, youth, and schools.',
@@ -60,22 +75,7 @@ const projects = [
 		techStacks: ['Wordpress', 'Toolset', 'Jotform', 'Custom Built'],
 	},
 
-	// 9
-	{
-		delay: '500',
-		title: 'Abra Auto Midwest',
-		description:
-			'Abra have been taking the hassle out of car accident repairs. We offer complete auto body and glass repair services.',
-		// imageLink: portfolio_1,
-		imageLink:
-			'https://res.cloudinary.com/dk9fdcnnp/image/upload/c_scale,q_60,w_600/v1623627555/Resume/jge6dlhdrgidkn0z35cp.png',
-		gifLink: '',
-		liveDemo: 'https://abraautomidwest.com/pages/shop-requests',
-		videoDemo: '',
-		sourceCode: 'https://github.com/Suonx002/happynails',
-		techStacks: ['React', 'Redux', 'Material-UI'],
-	},
-	// 8
+	// 11
 	{
 		delay: '700',
 		title: 'Riley Sports',
@@ -88,9 +88,24 @@ const projects = [
 		sourceCode: '',
 		techStacks: ['Wordpress', 'Custom Built'],
 	},
-	// 7
+
+	// 10
 	{
 		delay: '900',
+		title: 'Ice Team',
+		description: `We were there at the beginning of the Ice Fishing Revolution™ . . . because we helped start it, and we are cutting no corners to ensure the sport continues to grow.`,
+		imageLink:
+			'https://res.cloudinary.com/dk9fdcnnp/image/upload/c_scale,q_60,w_600/v1631242854/Resume/j4mncprwidzghcvebiln.png',
+		gifLink: '',
+		liveDemo: 'https://iceteam.com/',
+		videoDemo: '',
+		sourceCode: '',
+		techStacks: ['Wordpress', 'Custom Built'],
+	},
+
+	// 9
+	{
+		delay: '500',
 		title: 'The MN Table',
 		description: `We are passionate about the convenience of delivering quality meals from our chef’s Minneapolis kitchen to your doorstep!`,
 		// imageLink: portfolio_1,
@@ -102,6 +117,38 @@ const projects = [
 		sourceCode: '',
 		techStacks: ['React', 'Redux', 'Chakra UI'],
 	},
+	// 8
+	{
+		delay: '700',
+		title: 'Abra Auto Midwest',
+		description:
+			'Abra have been taking the hassle out of car accident repairs. We offer complete auto body and glass repair services.',
+		// imageLink: portfolio_1,
+		imageLink:
+			'https://res.cloudinary.com/dk9fdcnnp/image/upload/c_scale,q_60,w_600/v1623627555/Resume/jge6dlhdrgidkn0z35cp.png',
+		gifLink: '',
+		liveDemo: 'https://abraautomidwest.com/pages/shop-requests',
+		videoDemo: '',
+		sourceCode: '',
+		techStacks: ['Wordpress', 'Custom Built'],
+	},
+
+	// 7
+	{
+		delay: '500',
+		title: 'Tiger4GInternet',
+		description:
+			'Ultra-Fast & Reliable Internet Speeds + Limitless Data + Hassle-Free Pricing.',
+		// imageLink: portfolio_1,
+		imageLink:
+			'https://res.cloudinary.com/dk9fdcnnp/image/upload/c_scale,q_60,w_600/v1631242854/Resume/fcihjauowin2te97de50.png',
+		gifLink: '',
+		liveDemo: 'https://tiger4ginternet.com/',
+		videoDemo: '',
+		sourceCode: 'https://github.com/Suonx002/happynails',
+		techStacks: ['React', 'Redux', 'Material-UI'],
+	},
+
 	// 6
 	{
 		delay: '500',
