@@ -29,24 +29,10 @@ const projects = [
 		sourceCode: '',
 		techStacks: ['Wordpress', 'Custom Built'],
 	},
+
 	// 14
 	{
 		delay: '700',
-		title: 'Pinky Swear',
-		description:
-			'Helping kids with cancer and their families with financial and emotional support since 2003.',
-		// imageLink: portfolio_1,
-		imageLink:
-			'https://res.cloudinary.com/dk9fdcnnp/image/upload/c_scale,q_60,w_600/v1623627555/Resume/ppvbwreayh3bhgin7zyl.png',
-		gifLink: '',
-		liveDemo: 'https://pinkyswear.org/',
-		videoDemo: '',
-		sourceCode: '',
-		techStacks: ['Wordpress', 'Custom Built'],
-	},
-	// 13
-	{
-		delay: '900',
 		title: 'Student Angler Tournament Trail',
 		description:
 			'At SATT our goal is to grow the future of fishing and create a lasting impact for students and families.',
@@ -59,9 +45,9 @@ const projects = [
 		sourceCode: '',
 		techStacks: ['Wordpress', 'Toolset', 'Jotform', 'Custom Built'],
 	},
-	// 12
+	// 13
 	{
-		delay: '500',
+		delay: '900',
 		title: 'Student Angler',
 		description:
 			'Dedicated to increasing fishing opportunities and environmental awareness for students, youth, and schools.',
@@ -73,6 +59,21 @@ const projects = [
 		videoDemo: '',
 		sourceCode: '',
 		techStacks: ['Wordpress', 'Toolset', 'Jotform', 'Custom Built'],
+	},
+	// 12
+	{
+		delay: '500',
+		title: 'Pinky Swear',
+		description:
+			'Helping kids with cancer and their families with financial and emotional support since 2003.',
+		// imageLink: portfolio_1,
+		imageLink:
+			'https://res.cloudinary.com/dk9fdcnnp/image/upload/c_scale,q_60,w_600/v1623627555/Resume/ppvbwreayh3bhgin7zyl.png',
+		gifLink: '',
+		liveDemo: 'https://pinkyswear.org/',
+		videoDemo: '',
+		sourceCode: '',
+		techStacks: ['Wordpress', 'Custom Built'],
 	},
 
 	// 11
